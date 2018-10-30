@@ -1,0 +1,129 @@
+.bg-grey-light {
+	background-color: #eef3f6 !important;
+}
+.bg-grey {
+	background-color: #313133 !important;
+}
+.bg-voilet {
+	background: #8a52e6 !important;
+}
+.bg-green-light {
+	background-color:#dcfae8;
+}
+.bg-danger-light {
+	background-color:#ffeaeb;
+}
+.bg-magento {
+	background-color: #6f76fc !important;
+}
+.border-green {
+	border-color: #28a745 !important;
+}
+.w-240 {
+	width: 240px !important;
+}
+.w-10 {
+	width: 10rem;
+}
+.text-deep-green {
+	color: #043a10 !important;
+}
+.text-deep-danger {
+	color: #a30101 !important;
+}
+.text-size-09 {
+	font-size: 0.9rem;
+}
+.css_btn_rounded {
+	border-radius: 2rem;
+}
+header img {
+	width: 100%;
+	height: 92px;
+}
+.css_quesAns_header {
+	font-size: 18px;
+	background: #9691e1; /* Old browsers */
+	background: -moz-linear-gradient(left, #9691e1 0%, #71b1bd 90%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #9691e1 0%,#71b1bd 90%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #9691e1 0%,#71b1bd 90%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9691e1', endColorstr='#71b1bd',GradientType=1 ); /* IE6-9 */
+}
+.css_ans_btn {
+	font-size: 20px;
+	font-weight: 500;
+	padding: .200rem .75rem;
+}
+.css_btn_group {
+	margin-top: 6rem;
+}
+footer {
+	color: #555557;
+}
+.textbox {
+  height: 700px;
+}
+.css_quesViewCirle {
+	border-radius: 5rem;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 50px;
+  height: 50px;
+}
+.progress {
+	height: 0.6rem;
+}
+.success-msg,
+.warning-msg {
+	display: none;
+}
+.progress-circleBar {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  color: #000;
+  background-color: transparent;
+}
+
+.progress-circleBar div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.progress-circleBar div span {
+  position: absolute;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 75px;
+  height: 75px;
+  width: 75px;
+  left: 12.5px;
+  top: 12.5px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+}
+.progress-circleBar .rotate {
+  clip: rect(0 50px 100px 0);
+  background-color: #4b86db;
+}
+.progress-circleBar .left {
+  clip: rect(0 50px 100px 0);
+  opacity: 1;
+  background-color: #b3cef6;
+}
+.progress-circleBar .right {
+  clip: rect(0 50px 100px 0);
+  transform: rotate(180deg);
+  opacity: 0;
+  background-color: #4b86db;
+}
+ @keyframes 
+toggle {  0% {
+ opacity: 0;
+}
+ 100% {
+ opacity: 1;
+}

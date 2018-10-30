@@ -1,0 +1,102 @@
+/*Header and Footer*/
+
+/*Main Content*/
+/* .container{
+	margin-top:10px;
+	margin-bottom:10px;		
+} */
+
+.search_bar{
+	background-color:#f2f2f2;
+}
+.activities_search{
+	width: 35%;
+	border: 1px solid #ccc;
+	border-radius:15px;
+    font-size: 16px;
+    background-color: #fff;
+	background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 57px;
+    margin: 20px 0 20px 20px; 
+	background-image: url(../images/dashboard/search_icon.png);
+}
+.title_bar{
+	background-image: linear-gradient(to right, #f08271, #7b5fac);
+    color:white;          }
+.key_txt{font-weight:bold;margin-top: 10px;margin-bottom: 10px;}
+.value_txt{margin-top: 10px;margin-bottom: 10px;}
+.status_value{color:white;font-weight:bold;}
+.scheduled_list{
+                  background-color:#2c32cb;
+				  color:white;
+				  border-radius:50px;
+				 }
+.completed_list{
+	border-radius:50px;
+	border:1px solid #cccdce;
+	color:#a5a5a5;
+	text-align:center;
+	
+}
+.status_value1{
+	color:#a5a5a5;
+}
+.details{font-size:16px;
+          padding:10px 20px;
+		  }
+.level_display{
+	border-radius:50%;
+	padding:7px;
+	color:#fff;
+}
+.L0{background-color:rgb(112, 48, 160);}
+.L1{background-color:rgb(0, 197, 220);}
+.L2{background-color:rgb(255, 82, 94);}
+thead{font-size:11px;}
+.Candidate_name span{
+	background-color:red;
+	color:#fff;
+	padding:3px;
+	margin-left:20px;
+	font-size:10px;
+}
+
+.email_id{color:#2e75b6;font-size:11px;}
+.email_id img{
+	padding-right:7px;
+}
+
+tr td:nth-child(1){
+	width: 20%;
+}
+.view_add_feedback{
+	background-color:rgb(31,78,121);
+	color:#fff;
+	padding:7px;
+	/* margin-left:20px; */
+	
+}	
+#pagination_demo li{
+	list-style:none;
+	display:inline;
+	padding:10px;
+}
+.active{color:#2c32cb;pointer-events: auto;cursor:pointer;}
+.disabled{color:#ccc;pointer-events: none;}
+
+@media only screen and (max-width: 990px) {
+	.actvity_stage{
+		padding-left: 0px;
+		margin-top:20px;
+	}
+}
+.activity_mobile_view{
+	margin-top:30px;
+}
+@media only screen and (max-width: 600px) {
+	.activities_search{width:68%;}
+}
+.yts_total_level{
+	cursor:pointer;
+}

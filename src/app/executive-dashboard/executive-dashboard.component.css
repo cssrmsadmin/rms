@@ -1,0 +1,126 @@
+.heading{
+	font-size:16px;
+	color:#ffffff;
+    padding:10px;
+    margin-top:10px;
+	background: #9691e1; /* Old browsers */
+	background: -moz-linear-gradient(left, #9691e1 0%, #2989d8 45%, #2989d8 45%, #71b1bd 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #9691e1 0%,#2989d8 45%,#2989d8 45%,#71b1bd 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #9691e1 0%,#2989d8 45%,#2989d8 45%,#71b1bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9691e1', endColorstr='#71b1bd',GradientType=1 ); /* IE6-9 */
+}
+.side_section{
+	width:100%;
+	padding:10px 10px;
+	height:100px;
+	margin:20px 0px;
+	
+	}
+.side_align1,.side_align2{
+	display:inline-block !important;
+	display:flex;
+}
+.left-bar{
+	padding-left:0px;
+}
+.side_align1{
+	position:relative;
+	top:-35px;
+}
+.side_align2{
+	position:relative;
+	top:-5px;
+	left:15px;
+}
+.no_size{
+	font-size:40px;
+	font-weight:bold;
+	color:#2c2c2c;
+}
+.no_font{
+	font-size:20px;
+	color:#9a9a9a;
+}
+.side_bg{
+	background-color:#eef3f6;
+}
+.accepted_slide,.rejected_slide{
+	display:inline-block !important;
+	margin-top:-6px;
+}
+.img_a,.img_content{
+	display:inline-block !important;
+}
+.offer_summary{
+	position: relative;
+	top:-10px;
+	font-size:20px;
+	font-weight:3px;
+	color:#2c2c2c;
+	padding:0px;
+}
+.no_accept{
+	font-size:25px;
+	font-weight:bold;
+}
+.content_accept{
+	font-size:16px;
+	color:#9a9a9a;
+}
+.img_a{
+	margin:10px;
+	position:relative;
+	top:-25px;
+	cursor:pointer;
+}
+.side_bg1{
+	border:1px solid #9a9a9a;
+	height:100px;
+}
+.offer_released{
+	background-color:#d4d8dd;
+	font-size:18px;
+	font-weight:bold;
+	border:2px solid #dee0e1;
+}
+.filters{
+	padding-left:70px;
+	}
+.filters img{
+	cursor:pointer;
+}
+.table{
+	border:1px solid #9a9a9a;;
+	margin:10px 0px;;
+}
+.row{
+	margin-right:0px;
+	margin-left:0px;
+}
+.name{
+	margin-bottom:0px;
+}
+#mobile-no,#accept-offer{
+padding-top:35px;
+}
+
+.email-icon{
+	margin-bottom:0px;
+}
+.graph{
+	margin:20px 0px 20px;
+}
+.profile-icon,.email-icon{
+	
+	padding-right:5px;
+}
+.font-color{
+	color:#5155d2;
+}
+.month-summary{
+	font-size:20px;
+	font-weight:5px;
+}
+.table td {
+	padding: 5px;
+}

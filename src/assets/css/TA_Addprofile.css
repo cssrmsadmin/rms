@@ -1,0 +1,81 @@
+section{
+	margin:20px 20px 10px;
+	background-color:rgb(242,242,242);
+}
+.jd_details div p{
+	display:inline;
+	padding:10px;
+	
+}
+.head_content{
+	padding:10px 20px;
+	font:arial;
+	
+}
+#head_content p{
+	padding:10px 0px;
+	font-size:14px;
+	
+}
+p{
+	font-size:14px;
+}
+.jd_details div{
+	padding:10px 20px;
+}
+.text_right{
+	margin-left:14%;
+	
+	
+}
+#jd_value{
+	margin-left:22%;
+}
+#star{
+	font-size:30px;
+	color:red;
+}
+label {
+   cursor: pointer;
+}
+
+#upload-photo {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+#attach_icon_image,#attach_text,#file_format{
+	display:inline;
+}
+#attach_text{
+	color:blue;
+	padding:0px 10px;
+}
+.label_size,.input_content{
+	display:block;
+}
+.input_content{
+	margin-bottom:15px;
+}
+.label_size{
+	margin-top:15px;
+}
+.btn{
+	border-radius:20px;
+	padding:5px 40px;
+	color:#ffffff;
+	font-size: 16px;
+	background-color:rgb(138,82,230);
+}
+.btn:active, .btn:hover{
+	color:white;
+}
+
+.submit_button{
+	text-align:center;
+	margin:100px 10px;
+}
+input{
+	width:250px;
+	height:30px;
+}

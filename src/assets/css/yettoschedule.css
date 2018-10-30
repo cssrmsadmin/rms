@@ -1,0 +1,238 @@
+/* .container{
+	padding-bottom:100px;
+} */
+.yts_view_profile{
+	background-image: linear-gradient(to right, #9993f4, #71b0bf);
+}
+.yts_view_text{
+	color:#fff;
+	padding:10px;
+}
+.header .row{	margin-top:0px;}
+.row{
+	margin-top:10px;
+}
+body{height:100%;}
+.yts_Candidate_details{
+	background-image: linear-gradient(to right, #f08271, #7b5fac);
+	color:#fff;
+}
+.yts_Candidate_details .row{
+	margin-top:7px;
+}
+.yts_firstcol, .yts_seccol{
+	padding:10px;
+}
+.yts_thirdcol{
+	padding-top:30px;
+	font-size:18px;
+	text-align:center;
+	}
+.yts_mytable>tbody>tr>td{
+	border: 0px solid #ccc;
+	width:10%;
+}
+.yts_add_new_hiring{
+	position:relative;
+	top:15px;
+	color:#373737;
+	border-radius:30px;
+    font-size: 14px;
+    background-color: #fff;
+	padding: 3px 0px;
+    margin: 10px 10px 10px 0;
+	width:15%
+}
+.yts_add_new_hiring.col-sm-12, .yts_add_new_hiring.col-xs-12{
+	max-width:20%
+}
+.yts_yetschedule_btn{
+	background-color:#5867c3;
+	border-radius:50px;
+	color:#fff;
+	padding: 8px;
+    width: 120%;
+    text-align: center;
+}
+.yts_completed_profile{
+	background-color:#fff;
+	border-radius:50px;
+	border:1px solid #cccdce;
+	color:#a5a5a5;
+	padding: 8px;
+    width: 80%;
+	margin-left:30px;
+    text-align: center;
+}
+.yts_completed_profile{border-radius:50px;}
+.yts_level_display{
+	border-radius:50%;
+	padding:7px;
+	color:#fff;
+}
+.yts_first_arrow, .yts_second_arrow{
+	background:url('../images/yettoschedule/arrow_icon.png')no-repeat;
+	width:26px;
+	height:20px;
+	background-size:26px 20px;
+	padding-left: 12px;
+    padding-right: 14px;
+}
+.yts_L0{background-color:rgb(112, 48, 160);}
+.yts_L1{background-color:rgb(0, 197, 220);}
+.yts_L2{background-color:rgb(255, 82, 94);}
+
+.yts_dashboard_search{
+	width: 45%;
+	border: 1px solid #ccc;
+	border-radius:15px;
+    font-size: 16px;
+    background-color: #eeeeee;
+	background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 10px 20px 10px 57px;
+    margin: 20px 0 20px 20px; 
+	background-image: url(../images/yettoschedule/search1_icon.png);
+}
+.yts_dashboard_search::placeholder { color: #bebebe; }
+.yts_mail_img{
+	background:url('../images/yettoschedule/email_icon.png')no-repeat;
+	width:27px;
+	height:27px;
+	background-size:27px 27px;
+	padding: 0px 12px 12px 20px;
+}
+.yts_email_id{color:#5155d2;}
+.yts_email_id img{
+	padding-right:10px;
+}
+.yts_table tr td:nth-child(1){
+	width: 22%;
+}
+.yts_call_img{
+	background:url('../images/yettoschedule/mob_icon.png')no-repeat;
+	width:27px;
+	height:27px;
+	background-size:27px 27px;
+	
+}
+.yts_call_number{margin-top:4px;    padding-left: 10px;}
+.yts_table tr td:nth-child(2), .yts_table tr td:nth-child(6){display:flex;}
+.yts_profile_img{
+	background:url('../images/yettoschedule/pro_icon.png')no-repeat;
+	width:27px;
+	height:27px;
+	background-size:27px 27px;
+}	
+.yts_feedback_img{
+	background:url('../images/yettoschedule/feed_icon.png')no-repeat;
+	width:27px;
+	height:27px;
+	background-size:27px 27px;
+	
+}
+.yts_feedback_text{
+	margin-top:4px;    
+	padding-left: 10px; 
+	color: #5155d2;
+	cursor:pointer;
+}
+div .yts_level_display{width:30px;}	
+.yts_stage_Schedule_btn{
+	width: 56%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+	margin: -24px 0px 0px 40px;
+}
+.yts_stage_Progress_btn{
+	width: 56%;
+    background-color:#f8cb00;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+	margin: -24px 0px 0px 40px;
+	color:white;
+}
+.yts_stage_Rejected_btn{
+	width: 56%;
+    background-color:#e9545a;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+	margin: -24px 0px 0px 40px;
+	color:white;
+}
+.yts_stage_Selected_btn{
+	width: 56%;
+    background-color:#45b7af;
+    border-radius: 15px;
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+    text-align: center;
+	margin: -24px 0px 0px 40px;
+	color:white;
+}
+.yts_mobile_view .yts_profile_img{margin-left:13px;}
+.yts_mobile_view .yts_call_img{padding: 0px 12px 12px 20px;} 	
+.yts_phone_id{margin-top: 10px;}
+.yts_feedback{
+	display:flex;
+}	
+
+.page{
+	display:none;
+}
+.page-active{
+	display:table-row;
+}	
+#pagination_demo li{
+	list-style:none;
+	display:inline;
+	padding:10px;
+}
+.active{color:#2c32cb;pointer-events: auto;cursor:pointer;}
+.disabled{color:#ccc;pointer-events: none;}
+
+
+
+
+@media only screen and (max-width: 990px) {
+	.yts_thirdcol{display:flex; width:65%;padding-top: 0px;}
+	.yts_add_new_hiring.col-sm-12, .yts_add_new_hiring.col-xs-12{
+		max-width: 43%;
+		margin-left: 21px;
+		float:left!important;
+	}	
+	.yts_yetschedule_btn{width:80%;}
+	.yts_right_level_display{margin-top:20px;}
+}
+@media only screen and (max-width: 700px) {
+	.yts_thirdcol{width:70%;}
+}
+@media only screen and (max-width: 660px) {
+	.yts_yetschedule_btn{width:90%;}
+}
+@media only screen and (max-width: 600px) {
+	body{
+		font-size:12px;
+	}
+	.yts_yetschedule_btn{width:100%;}
+	.yts_thirdcol{width:100%;}
+	.yts_completed_profile{width:100%;margin-left:0px;}
+	.yts_dashboard_search{
+		float:left;
+		width:68%;
+	}
+	.yts_mobile_view .yts_stage_Schedule_btn{width:76%;}
+}
+@media only screen and (max-width: 450px) {
+	.yts_yetschedule_btn{width:130%;}
+	.yts_completed_profile{width:86%; margin-left: 30px;} 
+	.yts_mobile_view .yts_mail_img{display:none;}	
+	.yts_mobile_view .yts_call_img{display:none;}	
+} 

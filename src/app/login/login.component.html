@@ -1,0 +1,32 @@
+<div class="mycontainer">
+	<div class="logo_center"><div class="logo"></div></div>
+		<div class="white_bg">
+      <form #signinForm="ngForm" (ngSubmit)="gotoDashboard(signinForm)">
+        <div class="container-fluid">
+          <div class="signin col-md-12 col-sm-12 col-xs-12">Sign in</div>
+        </div>
+        <div class="login-form">
+          <div class="container-fluid">
+            <div class="control-group">
+              <div class="username col-md-12 col-sm-12 col-xs-12">
+                <input type="text" name="email" id="email"  placeholder="Username" ngModel>
+              </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="control-group">
+                <div class="password col-md-12 col-sm-12 col-xs-12">
+                  <input type="password" name="password" id="password" ngModel placeholder="Password" >
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <input type="submit" value="Sign in"  class="signin_btn col-md-12 col-sm-12 col-xs-12"/>
+            </div>
+            <div class="container-fluid">
+              <div class="forget_password col-md-12 col-sm-12 col-xs-12">Forget password?</div>
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,1 @@
+const IncomingForm = require('formidable').IncomingForm;

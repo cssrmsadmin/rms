@@ -1,0 +1,98 @@
+<app-header></app-header>
+<div class="wrapper add-new-hiring-container">
+  <div class="row_top"></div>
+  <div class="heading">Add new Hiring</div>
+  <form  #addNewHiringFrm="ngForm" (ngSubmit)="addNewHiring(addNewHiringFrm)">
+    <section>
+      <div class="jd_section">
+        <h4 id="jd_title">JD Details</h4>
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <p>JD ID</p>
+            <input type="text" class="form-control" required name="Jd_Id" ngModel>
+            <p>JD Name</p>
+            <input type="text" class="form-control" required  name="Jd_Name" ngModel>
+            <p>Years of Exp</p>
+            <select id="years_exp"   name="Years_of_Exp" ngModel>
+              <option value="0"></option><option value="1">1</option><option value="2">2</option>
+              <option value="3">3</option><option value="4">4</option><option value="5">5</option>
+              <option value="6">6</option><option value="7">7</option><option value="8">8</option>
+              <option value="9">9</option><option value="10">10</option><option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <p>BU Name</p>
+              <input type="text" id="bu_name" class="form-control" required name="BU_Name" ngModel>
+            <p>Designation/Role</p>
+            <input type="text" id="designation" class="form-control" required  name="Designation" ngModel>
+            <p>No. Of Position</p>
+            <select id="no_of_position"  name="No_of_Position" ngModel>
+              <option value="0"></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div> 
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="interview_panel_details">
+        <h4 id="jd_title">Interview panel details</h4>
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div>
+              <input type="checkbox" class="l0_interview_checkbox" name="L0_interview" value="L0" ngModel/>Is L0 interview is required
+            </div>
+            <div id="program_side">
+              <input type="radio" name="L0_interview" value="program_code" ngModel/>Program Code
+              <input type="radio" name="L0_interview" value="quiz" ngModel/>Quiz
+            </div>
+            <p>L1 Panelist one</p>
+            <input type="text" id="l1_panelist_one" class="form-control" required  name="L1_Panelist_1" ngModel>
+            <p>L2 Panelist one</p>
+            <input type="text" id="l2_panelist_one"class="form-control" required name="L2_Panelist_1" ngModel>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div>
+              <input type="checkbox" name="external_interview" class="external_interview" value="external" ngModel/>Inlude external interview panel details
+            </div>
+            <div id="external_side">
+              <input type="text" id="external_interview_panel_details" class="form-control" required name="external_interview_panel_details" ngModel> 
+            </div>
+            <p>L1 Panelist two</p>
+            <input type="text" class="form-control" required  name="L1_Panelist_2" id="l1_panelist_two" ngModel>
+            <div id="l1_panelist_two_error"></div>
+            <p>L2 Panelist two</p>		
+            <input type="text" id="l2_panelist_two"class="form-control" required  name="L2_Panelist_2" ngModel>
+          </div>
+        </div>      
+      </div>
+    </section>
+    <section>
+      <div class="skill_sets">
+        <h4 id="jd_title">Skill Sets</h4>
+        <input type="text" class="form-control" id="skill_sets" name="Skills"  required ngModel>
+      </div>
+    </section>
+    <section>
+      <div class="upload_jd">
+        <h4 class="form-group">Upload JD</h4>
+        <label for="file" id="attach_icon_image"><p id="attach_text">Attach</p></label>
+        <span id="file_format">(File formats: word, PPT, PDF)</span>
+        <input type="file" id="file"  name="Attachment" (change)="handleFileInput($event)" ngModel>
+        <div class="output">{{ fileName }} </div>
+      </div>
+      <input type="file" (change)="fileEvent($event)" />
+    </section>
+    <div class="submit_button">
+      <div class="submit_btn"><input type="submit" class="btn"></div>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
