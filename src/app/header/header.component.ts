@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) {  }
-
-  ngOnInit() {
+  ngOnInit() {}
+  goHome() {
+    this.router.navigate(["/ta-dashboard"]);
   }
-  goHome(){
-
-    this.router.navigate(['/ta-dashboard']);
-  }
-  goLogout(){
-    this.router.navigate(['/login']);
+  goLogout() {
+    this.router.navigate(["/login"]);
   }
 }

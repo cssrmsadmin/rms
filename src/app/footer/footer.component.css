@@ -1,12 +1,16 @@
-.footer-block{
-	height:50px;
-	color:#767678;
+.footer-block {
+  height: 50px;
+  color: #767678;
 }
-.footer_txt{font-size:12px;padding: 12px;}
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;    width: 100%;
-    background-color:#313133;
-    z-index: 1;
+.footer_txt {
+  font-size: 12px;
+  padding: 12px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #313133;
+  z-index: 1;
 }

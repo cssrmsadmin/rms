@@ -1,122 +1,100 @@
 <app-header></app-header>
-<div class="wrapper" *ngFor = "let feedback of feedback">
+<div class="wrapper" *ngFor="let feedback of feedback">
 	<div class="row_top"></div>
-     <div class="heading">View feedback</div>
-		 <section>
-			 <div class="row">
-				 <div class="col-sm-4 col-xs-12 view_fb_image">
-					   <div class="row image_top">
-							<div class="col-sm-4 "> <img src="../../assets/images/TA/user.png"></div>
-							<div class="col-sm-8 name_top">
-								  <h4>{{feedback.Name}}</h4>
-								  <div id="mail_color"><span><img src="../../assets/images/TA/email_icon.png"></span><p id="mail_clr">{{feedback.email}}</p></div>
-								  <div><span><img src="../../assets/images/TA/mob_icon.png"></span>{{feedback.Phone_No}}</div>
-								  <div><span><img src="../../assets/images/TA/pro_icon.png"></span>view profile</div>
-							</div>
-					   </div>
-				</div>
-				 <div class="col-sm-4 col-xs-12 middle_exp">
-					<div id="exp_text">
-						 <p>Experience</p>
-						 <p>: {{feedback.Exp}}</p>
-						 </div>
-						 <div id="jd_name_text">
-						 <p>JD Name</p>
-						 <p>: {{feedback.jd_Name}}<span id="de_icon"><img src="../../assets/images/TA/download_icon.png"></span></p>
+	<div class="heading">View feedback</div>
+	<section>
+		<div class="row">
+			<div class="col-sm-4 col-xs-12 view_fb_image">
+				<div class="row image_top">
+					<div class="col-sm-4"> <img src="../../assets/images/TA/user.png"></div>
+					<div class="col-sm-8 name_top">
+						<h4>{{feedback.Name}}</h4>
+						<div id="mail_color"><span><img src="../../assets/images/TA/email_icon.png"></span>
+							<p id="mail_clr">{{feedback.email}}</p>
+						</div>
+						<div><span><img src="../../assets/images/TA/mob_icon.png"></span>{{feedback.Phone_No}}</div>
+						<div><span><img src="../../assets/images/TA/pro_icon.png"></span>view profile</div>
 					</div>
 				</div>
-				 <div class="col-sm-4 col-xs-12">
-					 <div id="right_side_border">
-					   <p id="right_side_selected_border"><span><img src="../../assets/images/TA/tick_icon.png"></span>Selected</p>
-						<p id="time_slot"><span><img src="../../assets/images/TA/time_icon.png" id="timer_icon"></span>Interview </p><p id="scheduled_time"> Completed</p>
-					 </div>
-				 </div>
-			 </div>
-		 </section>
-		 <!-- <section id="program_statement_bg">
-			  <div><h4>Program statement</h4></div>
-			  <p>Lorem Ipsumis simply dummy text of the printing and typesetting industry. Lorem Ipsumis simply dummy text of the printing and typesetting industry.</p>
-			  <h4>Solution by candidate</h4>
-			  <p id="doc_view">.Net.doc</p>
-		 </section> -->
-		 <section id="l0_feedback_bgcolor">
-			 <div class="row">
-				<div class="col-sm-3 col-xs-12">
-				   <h4>L0 - Feedback</h4>
-				   <div id="stars_fd"><img src="../../assets/images/TA/rating_icon.png">
-						<img src="../../assets/images/TA/rating_icon.png">
-						<img src="../../assets/images/TA/rating_icon.png">
-				   </div>
-				   <p id="comments2">Score: {{feedback.L0_Rating}}/10</p>
-				   <p id="comments">{{feedback.L0_Feedback}}</p>
+			</div>
+			<div class="col-sm-4 col-xs-12 middle_exp">
+				<div id="exp_text">
+					<p>Experience</p>
+					<p>: {{feedback.Exp}}</p>
 				</div>
-				<!-- <div class="col-sm-3 col-xs-12">
-						<circle-progress
-						[percent]="7"
-						[radius]="40"
-						[outerStrokeWidth]="5"
-						[innerStrokeWidth]="5"
-						[outerStrokeColor]="'#484d91'"
-						[innerStrokeColor]="'rgb(157,160,200)'"
-						[animation]="false"
-						[animationDuration]="300"
-						[showSubtitle] = "false"
-						[space]="-5"
-						
-					></circle-progress>
-	
-				       <p id="puzzle_score">Puzzle score</p>
-				</div> -->
-			 </div>
-		 </section>
-		 <section id="l1_feedback_bgcolor">
-			   <h4>L1 - Feedback General Competency</h4>
-			   
-			   <div class="row">
-				<div class="col-sm-4 col-xs-12">
-				<div class="" *ngFor = "let score of feedback.Skill_Score">
-							
-							{{score.Skill}}: <span class="score-value">{{score.Score}}</span>/10
-				</div> 
-						
-				   </div>
-				   
-			   </div>
-			   
-				<div class="row l2_overal_score">
-						<div class="col-sm-12">
-							<div class="row" id="overall_score_bg">
-							   <div class="col-sm-2 col-xs-2 text-center" id="l1_bgc"><h4>L1-Feedback</h4></div>
-							   <div class="col-sm-8 col-xs-10">
-									<h4>Overall Score</h4>
-									<div id="stars_fd1"><img src="../../assets/images/TA/rating_icon.png">
-													  <img src="../../assets/images/TA/rating_icon.png">
-													  <img src="../../assets/images/TA/rating_icon.png">
-									</div>
-									<p id="comments2">Score: {{feedback.L1_Overall_Rating}}/10</p>
-								   <p>{{feedback.L1_Feedback}}</p>
-							   </div>
-							</div>
-						</div>
+				<div id="jd_name_text">
+					<p>JD Name</p>
+					<p>: {{feedback.jd_Name}}<span id="de_icon"><img src="../../assets/images/TA/download_icon.png"></span></p>
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<div id="right_side_border">
+					<p id="right_side_selected_border"><span><img src="../../assets/images/TA/tick_icon.png"></span>Selected</p>
+					<p id="time_slot"><span><img src="../../assets/images/TA/time_icon.png" id="timer_icon"></span>Interview </p>
+					<p id="scheduled_time"> Completed</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="l0_feedback_bgcolor">
+		<div class="row">
+			<div class="col-sm-3 col-xs-12">
+				<h4>L0 - Feedback</h4>
+				<div id="stars_fd"><img src="../../assets/images/TA/rating_icon.png">
+					<img src="../../assets/images/TA/rating_icon.png">
+					<img src="../../assets/images/TA/rating_icon.png">
+				</div>
+				<p id="comments2">Score: {{feedback.L0_Rating}}/10</p>
+				<p id="comments">{{feedback.L0_Feedback}}</p>
+			</div>
+		</div>
+	</section>
+	<section id="l1_feedback_bgcolor">
+		<h4>L1 - Feedback General Competency</h4>
+		<div class="row">
+			<div class="col-sm-4 col-xs-12">
+				<div class="" *ngFor="let score of feedback.Skill_Score">
+					{{score.Skill}}: <span class="score-value">{{score.Score}}</span>/10
+				</div>
+			</div>
+		</div>
+		<div class="row l2_overal_score">
+			<div class="col-sm-12">
+				<div class="row" id="overall_score_bg">
+					<div class="col-sm-2 col-xs-2 text-center" id="l1_bgc">
+						<h4>L1-Feedback</h4>
 					</div>
-					<div class="row l2_overal_score">
-							<div class="col-sm-12">
-								<div class="row" id="overall_score_bg">
-								   <div class="col-sm-2 col-xs-2 text-center" id="l1_bgc"><h4>L2-Feedback</h4></div>
-								   <div class="col-sm-8 col-xs-10">
-										<h4>Overall Score</h4>
-										<div id="stars_fd1"><img src="../../assets/images/TA/rating_icon.png">
-														  <img src="../../assets/images/TA/rating_icon.png">
-														  <img src="../../assets/images/TA/rating_icon.png">
-										</div>
-										<p id="comments2">Score: {{feedback.L2_Overall_Rating}}/10</p>
-									   <p>{{feedback.L2_Feeback}}</p>
-								   </div>
-								</div>
-							</div>
+					<div class="col-sm-8 col-xs-10">
+						<h4>Overall Score</h4>
+						<div id="stars_fd1"><img src="../../assets/images/TA/rating_icon.png">
+							<img src="../../assets/images/TA/rating_icon.png">
+							<img src="../../assets/images/TA/rating_icon.png">
 						</div>
-			
-		</section>
-	 
+						<p id="comments2">Score: {{feedback.L1_Overall_Rating}}/10</p>
+						<p>{{feedback.L1_Feedback}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row l2_overal_score">
+			<div class="col-sm-12">
+				<div class="row" id="overall_score_bg">
+					<div class="col-sm-2 col-xs-2 text-center" id="l1_bgc">
+						<h4>L2-Feedback</h4>
+					</div>
+					<div class="col-sm-8 col-xs-10">
+						<h4>Overall Score</h4>
+						<div id="stars_fd1"><img src="../../assets/images/TA/rating_icon.png">
+							<img src="../../assets/images/TA/rating_icon.png">
+							<img src="../../assets/images/TA/rating_icon.png">
+						</div>
+						<p id="comments2">Score: {{feedback.L2_Overall_Rating}}/10</p>
+						<p>{{feedback.L2_Feeback}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
 <app-footer></app-footer>

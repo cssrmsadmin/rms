@@ -1,197 +1,180 @@
-.search_Candidate{
-	background-image: linear-gradient(to right, #f08271, #7b5fac);
+.search_Candidate {
+  background-image: linear-gradient(to right, #f08271, #7b5fac);
+}
+.header .row {
+  margin-top: 0;
+}
+.row {
+  margin-top: 10px;
+}
+body {
+  height: 100%;
+}
+.data_font {
+  font-size: 13px;
+}
+.listfont {
+  font-size: 12px;
+  padding-left: 0;
+}
+.headingfont {
+  font-size: 12px;
+}
+.pagination {
+  font-size: 12px;
 }
 
-.header .row{	margin-top:0px;}
-.row{
-	margin-top:10px;
+.dashboard_search {
+  position: relative;
+  top: 5px;
+  width: 200px;
+  background-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  background-color: transparent;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 5px 5px 5px 50px;
+  margin: 20px 0 20px 20px;
+  background-image: url(../../assets/images/dashboard/search_icon.png);
 }
-body{
-	height:100%;
-   }
-/* .dashboard{
-	height: calc(100% - 50px);
-	overflow-y:scroll;
-} */
-
-.data_font{
-	font-size: 13px;
+.dashboard_search::placeholder {
+  color: #fff;
 }
-
-.listfont{
-	font-size: 12px;
-    /* font-weight: bold; */
-    padding-left: 0px;
-}
-.headingfont{
-	font-size: 12px;
-
-}
-.pagination{
-	font-size: 12px;
-	
-}
-
-.dashboard_search{
-	position:relative;
-	top:5px;
-	width: 200px;
-	background-size: 16px;
-	border: 1px solid #ccc;
-	border-radius:15px;
-    font-size: 16px;
-    background-color: transparent;
-	background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 5px 5px 5px 50px;
-    margin: 20px 0 20px 20px; 
-	background-image: url(../../assets/images/dashboard/search_icon.png);
-}
-.dashboard_search::placeholder { color: #fff; }
-.add_new_hiring{
-	left:100px;
-    white-space: nowrap;
-	cursor: pointer;
-	color:#373737;
-	border-radius:30px;
-    font-size: 16px;
-    background-color: #fff;
-	padding: 5px 5px;
-    margin: 20px 0px 20px 0;
-	max-width:20%;
-	
-	
-	
+.add_new_hiring {
+  left: 100px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #373737;
+  border-radius: 30px;
+  font-size: 16px;
+  background-color: #fff;
+  padding: 5px 5px;
+  margin: 20px 0;
+  max-width: 20%;
 }
 
-.table thead{
-	background-color:#06c3ff;
-	font-size:12px;
-	color:#fff;
-	font-weight:bold;
+.table thead {
+  background-color: #06c3ff;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
 }
-.list-row{
-    padding:5px 15px;
-	background-color:#06c3ff;
-	cursor:pointer;
-    margin:5px;
-    color:white;
+.list-row {
+  padding: 5px 15px;
+  background-color: #06c3ff;
+  cursor: pointer;
+  margin: 5px;
+  color: white;
 }
 
-.download{
-	width:27px;
-	height:27px;
-	background:url("../../assets/images/dashboard/download_icon.png")no-repeat;
-	background-size: 27px 27px;
-    
-    margin: 0 0 0px 20px;
+.download {
+  width: 27px;
+  height: 27px;
+  background: url("../../assets/images/dashboard/download_icon.png") no-repeat;
+  background-size: 27px 27px;
+  margin: 0 0 0 20px;
 }
-/* tr td:nth-child(1){
-	width: 20%;
-} */
-
-.view_icon{
-	width:27px;
-	height:27px;
-	background:url("../../assets/images/dashboard/view_icon.png")no-repeat;
-	background-size:27px 27px;
-	padding: 4px 2px 0px 27px;
-	
+.view_icon {
+  width: 27px;
+  height: 27px;
+  background: url("../../assets/images/dashboard/view_icon.png") no-repeat;
+  background-size: 27px 27px;
+  padding: 4px 2px 0 27px;
 }
-.add_profile, .view_profile{
-	background-color:#fff;
-	color:#000;
-	padding:3px;
-	border:1px solid #c5c5c5;
-	border-radius:50px;
-	text-align:center;
-	cursor: pointer;
-	white-space: nowrap;
+.add_profile,
+.view_profile {
+  background-color: #fff;
+  color: #000;
+  padding: 3px;
+  border: 1px solid #c5c5c5;
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
 }
-.glyphicon-plus{
-	margin-right:0px;
+.glyphicon-plus {
+  margin-right: 0;
 }
-.page{
-	display:none;
+.page {
+  display: none;
 }
-.page-active{
-	display:table-row;
+.page-active {
+  display: table-row;
 }
-#pagination_demo li{
-	list-style:none;
-	display:inline;
-	padding:10px;
+#pagination_demo li {
+  list-style: none;
+  display: inline;
+  padding: 10px;
 }
-/* input[type="text"]{
-width:100px;
-} */
-.active{color:#2c32cb;pointer-events: auto;}
-.disabled{color:#ccc;pointer-events: none;}
+.active {
+  color: #2c32cb;
+  pointer-events: auto;
+}
+.disabled {
+  color: #ccc;
+  pointer-events: none;
+}
 
 @media only screen and (max-width: 990px) {
-.add_profile, .view_profile{
-	width:30%;
-	margin-left:10px;
-}	
-.add_new_hiring{
-	max-width:30%;
-	cursor: pointer;
+  .add_profile,
+  .view_profile {
+    width: 30%;
+    margin-left: 10px;
+  }
+  .add_new_hiring {
+    max-width: 30%;
+    cursor: pointer;
+  }
 }
-}/* 
-@media only screen and (max-width: 700px) {
-.add_profile, .view_profile{
-	margin:10px;
-	padding:10px;
-}	
-} */
 @media only screen and (max-width: 600px) {
-	body{
-		font-size:11px;
-	}
-	.add_profile, .view_profile{
-		width:35%;
-	}	
-	.dashboard_search{
-		float:left;
-		width:68%;
-	}
-	 .add_new_hiring{
-		 cursor: pointer;
-		max-width: 68%;
-		margin-left: 21px;
-		float:left!important;
-	}	 
-	.download{
-		padding: 12px 0px 0px 29px;
-		margin: 0 0 0px 13px;
-	}
-	.dashboard .row{
-		margin:5px 0px;
-	}
+  body {
+    font-size: 11px;
+  }
+  .add_profile,
+  .view_profile {
+    width: 35%;
+  }
+  .dashboard_search {
+    float: left;
+    width: 68%;
+  }
+  .add_new_hiring {
+    cursor: pointer;
+    max-width: 68%;
+    margin-left: 21px;
+    float: left !important;
+  }
+  .download {
+    padding: 12px 0 0 29px;
+    margin: 0 0 0 13px;
+  }
+  .dashboard .row {
+    margin: 5px 0;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-	.download{
-		padding: 39px 0px 0px 29px;
-		margin: 0 0 0px 73px;
-	}	
-	.add_profile, .view_profile{
-		width:40%;
-	}	
+  .download {
+    padding: 39px 0 0 29px;
+    margin: 0 0 0 73px;
+  }
+  .add_profile,
+  .view_profile {
+    width: 40%;
+  }
 }
-@media screen and (max-width:576px){
-	.view_550{
-		width:100%;
-	}
-	.hiderdiv{
-		display: none;
-	}
+@media screen and (max-width: 576px) {
+  .view_550 {
+    width: 100%;
+  }
+  .hiderdiv {
+    display: none;
+  }
 }
-@media screen and (min-width:576px){
-	.Mobileview{
-		display: none;
-	}
-
-	
-	
+@media screen and (min-width: 576px) {
+  .Mobileview {
+    display: none;
+  }
 }

@@ -1,55 +1,57 @@
-.add-new-hiring-container{
-	padding-bottom: 90px;
+.add-new-hiring-container {
+  padding-bottom: 90px;
 }
-.heading{
-	font-size:20px;
-	color:#ffffff;
-	padding:10px;
-	background: #9691e1; /* Old browsers */
-	background: -moz-linear-gradient(left, #9691e1 0%, #2989d8 45%, #2989d8 45%, #71b1bd 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #9691e1 0%,#2989d8 45%,#2989d8 45%,#71b1bd 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #9691e1 0%,#2989d8 45%,#2989d8 45%,#71b1bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9691e1', endColorstr='#71b1bd',GradientType=1 ); /* IE6-9 */
+.heading {
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px;
+  background: #9691e1;
+  background: -moz-linear-gradient
+    (left, #9691e1 0%, #2989d8 45%, #2989d8 45%, #71b1bd 100%);
+  background: -webkit-linear-gradient
+    (left, #9691e1 0%, #2989d8 45%, #2989d8 45%, #71b1bd 100%);
+  background: linear-gradient
+    (to right, #9691e1 0%, #2989d8 45%, #2989d8 45%, #71b1bd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9691e1', endColorstr='#71b1bd',GradientType=1 );
 }
-#jd_section{
-	background-color:#eef3f6;
-	padding:10px;
+#jd_section {
+  background-color: #eef3f6;
+  padding: 10px;
 }
-section{
-	background-color:#eef3f6;
-	padding:10px;
-	border-top:10px solid white;
+section {
+  background-color: #eef3f6;
+  padding: 10px;
+  border-top: 10px solid #ffffff;
 }
-input[type=text]{
-
-border:1px solid black;
-width:230px;;
-height:20px;
+input[type="text"] {
+  border: 1px solid #000000;
+  width: 230px;
+  height: 20px;
 }
-input{
-    margin-bottom:20px;
+input {
+  margin-bottom: 20px;
 }
-p{
-    margin-bottom:5px;
+p {
+  margin-bottom: 5px;
 }
-.row_top{
-	margin-top:10px;
+.row_top {
+  margin-top: 10px;
 }
-input[type="file"] { 
-    z-index: -1;
-    opacity: 0;
-  }
-  #attach_text{
-	color:blue;
-	padding:0px 10px;
+input[type="file"] {
+  z-index: -1;
+  opacity: 0;
 }
-.submit_btn{
-	text-align:center;
-	padding:30px;
+#attach_text {
+  color: #0000ff;
+  padding: 0 10px;
 }
-.btn{
-	border-radius:20px;
-	padding:5px 40px;
-	color:#ffffff;
-	background-color:#9724e5;
+.submit_btn {
+  text-align: center;
+  padding: 30px;
+}
+.btn {
+  border-radius: 20px;
+  padding: 5px 40px;
+  color: #ffffff;
+  background-color: #9724e5;
 }

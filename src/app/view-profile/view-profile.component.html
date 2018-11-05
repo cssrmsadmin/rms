@@ -1,90 +1,87 @@
 <app-header></app-header>
-<div class="wrapper view-profile-block" *ngFor = "let listProfile of listProfile">
-  <!--div class="col-sm-12 col-md-12 col-lg-12 yts-view-profile">View Profile</div-->
+<div class="wrapper view-profile-block" *ngFor="let listProfile of listProfile">
   <div class="jd-info">
-      <table>
-        <tr>
-          <td width="25%"><div width="25%">JD ID :{{listProfile.Jd_Id}}</div></td>
-          <td width="25%"><div width="25%">JD Name: {{listProfile.jd_Name}}</div></td>
-          <td width="40%"><div width="25%">&nbsp; </div></td>
-          <td width="25%"><div width="25%" float="right"> <button class="btn btn-default btn-add-profile" (click)="showAddProfile()">
-              <img src="../../assets/images/dashboard/add_b_icon.png">Add Profile </button>  </div></td>
-        </tr>
-        <tr>
-      <td width="25%"><div >Created on :{{listProfile.created_date}}</div></td> 
-      <!-- <td width="25%">Total Profile received: 109</td> -->
-      <td width="25%"></td>
-      <td width="25%"></td>
-      <!--div class="col-2 jd-info-col">:{{listProfile.created_date}}</div-->
-        </tr> 
-      </table>
-      <!--div class="col-2 jd-info-col">JD ID :{{listProfile.Jd_Id}}</div-->
-      
-      <!--div class="col-2 jd-info-col">JD Name: {{listProfile.jd_Name}}</div-->
-      
-      <!--div class="col-2 text-center tot-profiles">Total Profile received 109 </div-->
-      
-      <!--div class="col-3 jd-info-col" float="right"> <button class="btn btn-default btn-add-profile" >
-        <img src="../../assets/images/dashboard/add_b_icon.png">Add Profile </button>  </div-->
-    
-      </div>
+    <table>
+      <tr>
+        <td width="25%">
+          <div width="25%">JD ID :{{listProfile.Jd_Id}}</div>
+        </td>
+        <td width="25%">
+          <div width="25%">JD Name: {{listProfile.jd_Name}}</div>
+        </td>
+        <td width="40%">
+          <div width="25%">&nbsp; </div>
+        </td>
+        <td width="25%">
+          <div width="25%" float="right"> <button class="btn btn-default btn-add-profile" (click)="showAddProfile()">
+              <img src="../../assets/images/dashboard/add_b_icon.png">Add Profile </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%">
+          <div>Created on :{{listProfile.created_date}}</div>
+        </td>
+        <td width="25%"></td>
+        <td width="25%"></td>
+      </tr>
+    </table>
+  </div>
   <div class="interview-block">
     <div class="row">
       <div class="col-2 interview-block-col">
-        <!-- <button class="btn btn-primary">Yet to schedule : 18</button> -->
       </div>
       <div class="col-3 interview-block-col">
-          <!-- <button class="btn btn-default interview-completed">Interview completed profile : 91</button> -->
       </div>
       <div class="col-3 interview-block-col">Interview stage Workflow</div>
       <div class="col-3 interview-block-col">
-          <ul class="interview-stage-flow">
-            <li class="l0">L0</li>
-            <li class="l1">L1</li>
-            <li class="l2">L2</li>
-          </ul>
+        <ul class="interview-stage-flow">
+          <li class="l0">L0</li>
+          <li class="l1">L1</li>
+          <li class="l2">L2</li>
+        </ul>
       </div>
     </div>
   </div>
-  <!--div class="search-candidates-block">
-    <div class="inner-addon left-addon">
-      <input type="text" class="form-control candidate-search" />
-    </div>
-  </div-->
   <div class="jd-list-block">
     <table class="table jd-tbl-list">
       <thead>
         <tr>
-        <td>Name</td>
-        <td>Skills</td>
-        <td>Profile</td>
-        <td>Role</td>
-        <td>Interview Stage</td>
-        <td>Profile Score</td>
-        <td>&nbsp;</td>
-        <td></td>
+          <td>Name</td>
+          <td>Skills</td>
+          <td>Profile</td>
+          <td>Role</td>
+          <td>Interview Stage</td>
+          <td>Profile Score</td>
+          <td>&nbsp;</td>
+          <td></td>
         </tr>
       </thead>
       <tbody class="data_font">
-        <tr *ngFor = "let profiles of listProfile.Profiles; index as i">
-            <td class="cad-name-email">
-              <p class="cad-name">{{profiles.Name}} </p>
-              <p class="email-icon">{{profiles.email}}</p>
-            </td>
-            <td class="mr-top">{{profiles.Phone_No}}</td>
-            <td class="mr-top"><div class="profile-icon"></div> </td>
-            <td class="mr-top">{{profiles.Exp}}</td>
-            <td class="mr-top">{{profiles.Int_Stage}}</td>
-            <td class="mr-top">{{profiles.Profile_Score}}</td>
-            <td class="mr-top"><a  ngShow="flag!=1" (click)="showFeedback(listProfile['Jd_Id'], profiles['Prof_ID'],i)"> <span class="view-feedback">View Feedback</span> </a></td>
-            <td class="mr-top"><a ngShow="flag==1"  (click)="showAddFeedback(listProfile['Jd_Id'], profiles['Prof_ID'])"> <span class="view-feedback">Add Feedback</span> </a></td>
-
+        <tr *ngFor="let profiles of listProfile.Profiles; index as i">
+          <td class="cad-name-email">
+            <p class="cad-name">{{profiles.Name}} </p>
+            <p class="email-icon">{{profiles.email}}</p>
+          </td>
+          <td class="mr-top">{{profiles.Phone_No}}</td>
+          <td class="mr-top">
+            <div class="profile-icon"></div>
+          </td>
+          <td class="mr-top">{{profiles.Exp}}</td>
+          <td class="mr-top">{{profiles.Int_Stage}}</td>
+          <td class="mr-top">{{profiles.Profile_Score}}</td>
+          <td class="mr-top"><a ngShow="flag!=1" (click)="showFeedback(listProfile['Jd_Id'], profiles['Prof_ID'],i)">
+              <span class="view-feedback">View Feedback</span> </a>
+          </td>
+          <td class="mr-top"><a ngShow="flag==1" (click)="showAddFeedback(listProfile['Jd_Id'], profiles['Prof_ID'])">
+              <span class="view-feedback">Add Feedback</span> </a>
+          </td>
         </tr>
-        <tr><td colspan="11">&nbsp;</td></tr>
-    </tbody>
+        <tr>
+          <td colspan="11">&nbsp;</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
-
 <app-footer></app-footer>
-

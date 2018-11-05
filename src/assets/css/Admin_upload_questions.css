@@ -1,32 +1,31 @@
-section{
-	margin:20px 20px 10px;
-	padding:10px 10px;
-	background-color:rgb(242,242,242);
+section {
+  margin: 20px 20px 10px;
+  padding: 10px 10px;
+  background-color: rgb(242, 242, 242);
 }
-h4{ 
-    font-size:25px;
-	font-weight:bold;
+h4 {
+  font-size: 25px;
+  font-weight: bold;
 }
-p{
-	padding-top:20px;
-	font-weight:bold;
+p {
+  padding-top: 20px;
+  font-weight: bold;
 }
-select{
-	width:120px;
-	height:27px;
+select {
+  width: 120px;
+  height: 27px;
 }
-option{
-	font-weight:bold;
-    
+option {
+  font-weight: bold;
 }
-#upload_questions{
-	padding-top:20px;
+#upload_questions {
+  padding-top: 20px;
 }
 label {
-   cursor: pointer;
-   color:blue;
+  cursor: pointer;
+  color: #0000ff;
 }
-input[type="file"] { 
+input[type="file"] {
   z-index: -1;
   position: absolute;
   opacity: 0;
@@ -35,31 +34,31 @@ input[type="file"] {
 input:focus + label {
   outline: 2px solid;
 }
-#attach_icon_image{
-	padding-right:5px;
+#attach_icon_image {
+  padding-right: 5px;
 }
-input[type="text"]{
-	height:40px;
-	width:170px;
+input[type="text"] {
+  height: 40px;
+  width: 170px;
 }
-#comments_text{
-	padding:10px 0px;
+#comments_text {
+  padding: 10px 0px;
 }
-.btn{
-	border-radius:20px;
-	padding:5px 40px;
-	color:#ffffff;
-	font-size: 16px;
-	background-color:rgb(138,82,230);
+.btn {
+  border-radius: 20px;
+  padding: 5px 40px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: rgb(138, 82, 230);
 }
-.btn:active, .btn:hover{
-	color:white;
+.btn:active,
+.btn:hover {
+  color: white;
 }
-.submit_btn{
-
-	margin:20px 0px;
+.submit_btn {
+  margin: 20px 0px;
 }
-input[type="file"] { 
+input[type="file"] {
   z-index: -1;
   position: absolute;
   opacity: 0;

@@ -1,8 +1,110 @@
-
-.mycontainer{
+.mycontainer {
+  position: absolute;
+  width: 100%;
+  background: url(../../assets/images/index/login_bg.png) no-repeat center
+    center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.logo {
+  background: url("../../assets/images/index/logo.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 49px;
+  margin: 50px auto;
+}
+.white_bg {
+  background-color: #fff;
+  width: 350px;
+  margin: 10px auto;
+  height: 350px;
+}
+.signin {
+  font-size: 30px;
+  color: #2c2c2c;
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+.username input,
+.password input {
+  width: 90%;
+  border: 0 solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  background-color: transparent;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 20px 16px 50px;
+  margin: 15px;
+}
+.username input[type="text"] {
+  background-image: url("../../assets/images/index/username_icon.png");
+}
+.password input[type="password"] {
+  background-image: url(../../assets/images/index/password_icon.png);
+}
+.signin_btn {
+  width: 70%;
+  border: 1px solid #b1b1b1;
+  border-radius: 20px;
+  font-size: 22px;
+  color: #fff;
+  background-color: #8a52e6;
+  text-align: center;
+  margin: 19px 15px 15px 48px;
+  cursor: pointer;
+}
+.forget_password {
+  font-size: 14px;
+  color: #9c9c9c;
+  margin: 0 0 05px 20px;
+  cursor: pointer;
+}
+body {
+  width: 100%;
+}
+.container {
+  padding-bottom: 100px;
+}
+button {
+  border-width: 0;
+}
+body {
+  font-family: Arial;
+}
+.header_block {
+  height: 91px;
+  background-image: linear-gradient(to right, #455be1, #d474f5);
+}
+.footer-block {
+  height: 50px;
+  color: #767678;
+}
+.footer_txt {
+  font-size: 12px;
+  padding: 12px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #313133;
+}
+@media only screen and (max-width: 550px) {
+  .mycontainer {
     position: absolute;
     width: 100%;
-    background: url(../../assets/images/index/login_bg.png) no-repeat center center ;
+    background: url(../../assets/images/index/login_bg.png) no-repeat center
+      center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,111 +113,11 @@
     left: 0;
     top: 0;
     height: 100%;
+  }
+  .white_bg {
+    background-color: #fff;
+    width: 250px;
+    margin: 10px auto;
+    height: 350px;
+  }
 }
-.logo{
-	background:url("../../assets/images/index/logo.png");
-	background-repeat:no-repeat;
-	width:200px;
-	height:49px;
-	margin:50px auto;
-}
-.white_bg{
-	background-color:#fff;
-	width:350px;
-	margin:10px auto;
-	height:350px;
-}
-.signin{
-	font-size:30px;
-	color:#2c2c2c;
-	text-align:center;
-}
-input:focus{
-    outline: none;
-}
-.username input, .password input{
-	width: 90%;
-	border: 0px solid #ccc;
-	border-bottom:1px solid #ccc;
-    font-size: 16px;
-    background-color: transparent;
-	background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 16px 20px 16px 50px;
-    margin: 15px;
-}
-.username input[type=text] {
-	background-image: url("../../assets/images/index/username_icon.png");
-}
-.password input[type=password] {
-    background-image: url(../../assets/images/index/password_icon.png);
-}
-.signin_btn{
-	width: 70%;
-	border: 1px solid #b1b1b1;
-	border-radius:20px;
-	font-size: 22px;
-	color:#fff;
-	background-color: #8a52e6;
-	text-align:center;
-	margin: 19px 15px 15px 48px;
-	cursor: pointer;
-}
-.forget_password{
-	font-size:14px;
-	color:#9c9c9c;
-	margin:0px 0px 05px 20px;
-	cursor: pointer;
-}
-body{
-	width:100%;
-}
-/*Footer*/
-.container{
-	padding-bottom:100px;
-}
-button{border-width:0px;}
-body{font-family:Arial;}
-.header_block{
-	height: 91px;
-	background-image: linear-gradient(to right, #455be1 , #d474f5);
-}
-.footer-block{
-	height:50px;
-	color:#767678;
-}
-.footer_txt{font-size:12px;padding: 12px;}
-.footer{position: fixed;
-    left: 0;
-	bottom: 0;    
-	width: 100%;
-	background-color:#313133;
-}
-@media only screen and (max-width: 550px){
-	.mycontainer{
-		position: absolute;
-		width: 100%;
-		background: url(../../assets/images/index/login_bg.png) no-repeat center center fixed;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		padding: 10px;
-		left: 0;
-		top: 0;
-		height: 100%;
-	}
-	.white_bg{
-		background-color:#fff;
-		width:250px;
-		margin:10px auto;
-		height:350px;
-	}
-	body{
-		width:100%;
-	}
-	}
-
-
-
-/*end of Footer*/

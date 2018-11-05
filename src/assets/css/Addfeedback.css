@@ -1,4 +1,4 @@
-.heading{
+.heading {
 	font-size:16px;
 	font-weight:bold;
 	color:#ffffff;
@@ -9,23 +9,21 @@
 	background: linear-gradient(to right, #9691e1 0%,#2989d8 45%,#2989d8 45%,#71b1bd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9691e1', endColorstr='#71b1bd',GradientType=1 ); /* IE6-9 */
 }
-section{
+section {
 	margin:20px 0px;
 }
 .row_top{
 	margin-top:10px;
-	}
-span img{
+}
+span img {
 	padding:5px 10px 5px 0px;
 	border-radius:25px;
-	
-	
 }
-.top-rightside{
+.top-rightside {
 	position:relative;
 	top:10px;
-	}
-#l1_style,#current_stage{
+}
+#l1_style,#current_stage {
 	display:inline;
 	font-weight:bold;
 }
@@ -48,14 +46,14 @@ span img{
 	color:#0aa6ff;
 }
 #mail_clr{
-	color:blue;
+	color:#0000ff;
 }
 #l1_style{
 	padding:5px;
 	margin:0px 10px 0px 30px;
 	border-radius:50px;
 	background-color:#0aa6ff;
-	color:white;
+	color:#ffffff;
 	cursor:pointer;
 }
 
@@ -203,20 +201,17 @@ input{
 	background-color:rgb(138,82,230);
 }
 .btn:active, .btn:hover{
-	color:white;
+	color:#ffffff;
 }
 #slider{
-			  width:100%;
-			  height:10px;
-			  float:left;
-			  background:red;
-			  margin-right:5px;
-			  border:1px solid ;
-
-			 
-			}
-
-			.ui-state-default, .ui-widget-content .ui-state-default{
+	width:100%;
+	height:10px;
+	float:left;
+	background:#ff0000;
+	margin-right:5px;
+	border:1px solid ;
+}
+.ui-state-default, .ui-widget-content .ui-state-default{
 				 width:17px;
 				hegight:3px;
 				border-radius:50%;

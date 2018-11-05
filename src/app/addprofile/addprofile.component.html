@@ -1,57 +1,71 @@
 <app-header></app-header>
 <div class="wrapper">
-<section>  
-  <div class="row head_content" id="head_content">
-    <div class="col-sm-8 col-xs-12">
-      <div class="row">
-        <div class="col-sm-5 col-xs-12 jd_details">
-           <div><p>JD ID: {{te.jdid}}</p></div>
-           <div><p>Created on:{{te.jdate}}</p></div>
+  <section>
+    <div class="row head_content" id="head_content">
+      <div class="col-sm-8 col-xs-12">
+        <div class="row">
+          <div class="col-sm-5 col-xs-12 jd_details">
+            <div>
+              <p>JD ID: {{te.jdid}}</p>
+            </div>
+            <div>
+              <p>Created on:{{te.jdate}}</p>
+            </div>
+          </div>
+          <div class="col-sm-7 col-xs-12 jd_details">
+            <div>
+              <p>JD Name: {{te.jdname}} </p>
+            </div>
+            <div>
+              <p>Skill Sets: {{te.skillset}}</p>
+            </div>
+          </div>
         </div>
-        <div class="col-sm-7 col-xs-12 jd_details">
-           <div><p>JD Name: {{te.jdname}} </p></div>
-           <div><p>Skill Sets: {{te.skillset}}</p></div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="row">
+          <div class="col-sm-6 jd_details">
+            <div>
+              <p>No. of Position: {{te.nopositions}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-4 col-xs-12">
-       <div class="row">
-        <div class="col-sm-6 jd_details">
-            <div><p>No. of Position:  {{te.nopositions}}</p></div>
-        </div>
-      </div>			
-    </div>	   
-  </div>
-</section>
-<form (ngSubmit)="submitValeus()">
-<section>
-    <div class="head_content">
-      <h4 id="add_profile">Add Profile</h4>
-      <h5>Attach resume<span id="star">*</span></h5>
-      <label for="file"><img src="../../assets/images/TA/attach_icon.png"id="attach_icon_image"><p id="attach_text">Attach</p></label><span id="file_format">(File formats: word, PPT, PDF)</span>
-      <input type="file" id="file"  name="Attachment" (change)="handleFileInput($event)">
-            <div class="output">{{ fileName }} </div>
-      <label for="firstName" class="label_size">First Name</label>
-      <input type="text" id="firstName" class="form-control" name="firstName" [(ngModel)]="addProfile.firstName" required >
-      <label for="middleName" class="label_size">Middle Name</label>
-      <input type="text" id="middleName" class="form-control" name="middleName" [(ngModel)]="addProfile.middleName" required >
-      <label for="lastName" class="label_size">Last Name</label>
-      <input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="addProfile.lastName" required>
-      <label for="emailID" class="label_size">Email ID</label>
-      <input type="text" id="emailID" name="emailId" class="form-control" [(ngModel)]="addProfile.email" required>
-      <label for="mobileNo" class="label_size">Mobile No</label>
-      <input type="text" id="mobileNo" name="mobileNo" class="form-control" [(ngModel)]="addProfile.mobileNo" required>
-      <label for="exp" class="label_size">Experience</label>
-      <input type="text" id="exp" class="form-control" name="exp" [(ngModel)]="addProfile.exp" required >
-   </div>
-</section>
-<div class="submit_button">
+  </section>
+  <form (ngSubmit)="submitValeus()">
+    <section>
+      <div class="head_content">
+        <h4 id="add_profile">Add Profile</h4>
+        <h5>Attach resume<span id="star">*</span></h5>
+        <label for="file"><img src="../../assets/images/TA/attach_icon.png" id="attach_icon_image">
+          <p id="attach_text">Attach</p>
+        </label>
+        <span id="file_format">(File formats: word, PPT, PDF)</span>
+        <input type="file" id="file" name="Attachment" (change)="handleFileInput($event)">
+        <div class="output">{{ fileName }} </div>
+        <label for="firstName" class="label_size">First Name</label>
+        <input type="text" id="firstName" class="form-control" name="firstName" [(ngModel)]="addProfile.firstName"
+          required>
+        <label for="middleName" class="label_size">Middle Name</label>
+        <input type="text" id="middleName" class="form-control" name="middleName" [(ngModel)]="addProfile.middleName"
+          required>
+        <label for="lastName" class="label_size">Last Name</label>
+        <input type="text" id="lastName" name="lastName" class="form-control" [(ngModel)]="addProfile.lastName"
+          required>
+        <label for="emailID" class="label_size">Email ID</label>
+        <input type="text" id="emailID" name="emailId" class="form-control" [(ngModel)]="addProfile.email" required>
+        <label for="mobileNo" class="label_size">Mobile No</label>
+        <input type="text" id="mobileNo" name="mobileNo" class="form-control" [(ngModel)]="addProfile.mobileNo"
+          required>
+        <label for="exp" class="label_size">Experience</label>
+        <input type="text" id="exp" class="form-control" name="exp" [(ngModel)]="addProfile.exp" required>
+      </div>
+    </section>
+    <div class="submit_button">
+      <input type="submit" class="btn" id="submit">
+    </div>
+  </form>
+</div>
 
-      <input type="submit"class="btn" id="submit">
-  <!-- <input type="submit" class="btn" value="Submit & Add new"  id="add_new"> -->
-  
-</div>
-</form>
-</div>
- 
 <app-footer></app-footer>

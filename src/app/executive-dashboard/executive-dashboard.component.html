@@ -1,80 +1,77 @@
 <app-header></app-header>
 <div class="wrapper" *ngFor="let listValue of listValue">
-   <div class="heading">JD & Candiate profile summary</div>
-    <div class="row">
-       <div class="col-sm-3 col-md-3 left-bar">
-           <div class="side_section side_bg">
-            <div class="side_align1"><img src="../../assets/images/admin_dashboard/t_jd.png"></div>
-          <div class="side_align2">
-            <h2 class="no_size">{{ listValue.JD_Count }}</h2>
+  <div class="heading">JD & Candiate profile summary</div>
+  <div class="row">
+    <div class="col-sm-3 col-md-3 left-bar">
+      <div class="side_section side_bg">
+        <div class="side_align1"><img src="../../assets/images/admin_dashboard/t_jd.png"></div>
+        <div class="side_align2">
+          <h2 class="no_size">{{ listValue.JD_Count }}</h2>
           <p class="no_font">JD Uploaded</p>
-          </div>
-         </div>
-         <div class="side_section side_bg">
-             <div class="side_align1"><img src="../../assets/images/admin_dashboard/t_profile.png"></div>
-          <div class="side_align2">
-            <h2 class="no_size">{{listValue.Tot_Prof_Received}}</h2>
+        </div>
+      </div>
+      <div class="side_section side_bg">
+        <div class="side_align1"><img src="../../assets/images/admin_dashboard/t_profile.png"></div>
+        <div class="side_align2">
+          <h2 class="no_size">{{listValue.Tot_Prof_Received}}</h2>
           <p class="no_font">Total Profile Received</p>
+        </div>
+      </div>
+      <div class="side_section side_bg1">
+        <div class="offer_summary">Offer Summary</div>
+        <div class="accepted_slide">
+          <div class="img_a"><img src="../../assets/images/admin_dashboard/offer_a.png"></div>
+          <div class="img_content">
+            <h4 class="no_accept">{{listValue.Offers_Accepted}}</h4>
+            <p class="content_accept">Accepted</p>
           </div>
-         </div>
-         <div class="side_section side_bg1">
-            <div class="offer_summary">Offer Summary</div>
-          <div class="accepted_slide">
-              <div class="img_a"><img src="../../assets/images/admin_dashboard/offer_a.png"></div>
-            <div class="img_content"><h4 class="no_accept">{{listValue.Offers_Accepted}}</h4>
-                             <p class="content_accept">Accepted</p>
-                     </div>
+        </div>
+        <div class="rejected_slide">
+          <div class="img_a"><img src="../../assets/images/admin_dashboard/offer_r.png"></div>
+          <div class="img_content">
+            <h4 class="no_accept">{{listValue.Offers_Rejected}}</h4>
+            <p class="content_accept">Rejected</p>
           </div>
-          <div class="rejected_slide">
-              <div class="img_a"><img src="../../assets/images/admin_dashboard/offer_r.png"></div>
-            <div class="img_content"><h4 class="no_accept">{{listValue.Offers_Rejected}}</h4>
-                                     <p class="content_accept">Rejected</p>
-              </div>
-          </div>
-         </div>
-       </div>
-       <div class="col-sm-9 col-md-9 col-xs-12 side_bg graph">
-          <div>
-            <P class="month-summary">Last 3 months summary</P>
-              <div style="display: block">
-                <canvas baseChart height="95px" 
-                        [datasets]="barChartData"
-                        [labels]="barChartLabels"
-                        [options]="barChartOptions"
-                        [legend]="barChartLegend"
-                        [chartType]="barChartType"
-                        [colors]="barChartColors"
-                        (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)">
-                </canvas>
-              </div>
-            </div>
-       </div>
+        </div>
+      </div>
     </div>
-    <div class="row offer_released">
-        <div class="col-sm-10">Recent Offer released (04)</div>
-      <div class="col-sm-2 filters">Filters <img src="../../assets/images/admin_dashboard/filter.png"></div>
+    <div class="col-sm-9 col-md-9 col-xs-12 side_bg graph">
+      <div>
+        <P class="month-summary">Last 3 months summary</P>
+        <div class="month-summary-canvas">
+          <canvas baseChart height="95px" [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [legend]="barChartLegend" [chartType]="barChartType" [colors]="barChartColors" (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+      </div>
     </div>
-    <table class="table" *ngFor="let profile of listValue.Last_3_Offered_Profiles">
-        <tbody >
-          <tr>
-            <td><p class="name">{{profile.Name}}</p>
-                <p class="font-color"><img src="../../assets/images/admin_dashboard/email_icon.png"class="email-icon" >{{profile.email}}</p>
-            </td>
-            <td id="mobile-no"><img src="../../assets/images/admin_dashboard/mob_icon.png" class="mobile-icon">{{profile.Phone_No}}</td>
-            <td></td>
-            <td></td>
-            <td id="accept-offer"class="accept-offer">Accepted Offer</td>
-          </tr>
-          <tr>
-              <td>Internal</td>
-              <td>Digital Engineering</td>
-              <td>Senior Software Engineer</td>
-              <td></td>
-              <td class="font-color"><img src="../../assets/images/admin_dashboard/pro_icon.png"class="profile-icon">offer letter & package</td>
-            </tr>
-        </tbody>
-        
-      </table>
-    </div>
-    <app-footer></app-footer>
+  </div>
+  <div class="row offer_released">
+    <div class="col-sm-10">Recent Offer released (04)</div>
+    <div class="col-sm-2 filters">Filters <img src="../../assets/images/admin_dashboard/filter.png"></div>
+  </div>
+  <table class="table" *ngFor="let profile of listValue.Last_3_Offered_Profiles">
+    <tbody>
+      <tr>
+        <td>
+          <p class="name">{{profile.Name}}</p>
+          <p class="font-color"><img src="../../assets/images/admin_dashboard/email_icon.png" class="email-icon">{{profile.email}}</p>
+        </td>
+        <td id="mobile-no"><img src="../../assets/images/admin_dashboard/mob_icon.png" class="mobile-icon">{{profile.Phone_No}}</td>
+        <td></td>
+        <td></td>
+        <td id="accept-offer" class="accept-offer">Accepted Offer</td>
+      </tr>
+      <tr>
+        <td>Internal</td>
+        <td>Digital Engineering</td>
+        <td>Senior Software Engineer</td>
+        <td></td>
+        <td class="font-color"><img src="../../assets/images/admin_dashboard/pro_icon.png" class="profile-icon">offer
+          letter & package</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

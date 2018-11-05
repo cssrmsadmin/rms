@@ -1,154 +1,163 @@
 /*Header and Footer*/
-.error{
-	color:red;
-	font-size:11px;
-	padding-left:30px;
+.error {
+  color: #ff0000;
+  font-size: 11px;
+  padding-left: 30px;
 }
-.row{
-	margin-top:0px;
+.row {
+  margin-top: 0px;
 }
-.container{
-	padding-bottom:100px;
+.container {
+  padding-bottom: 100px;
 }
-button{border-width:0px;}
-body{font-family:Arial;}
-.header_block{
-	height: 91px;
-	background-image: linear-gradient(to right, #455be1 , #d474f5);
+button {
+  border-width: 0px;
 }
-.footer-block{
-	height:50px;
-	color:#767678;
+body {
+  font-family: Arial;
 }
-.footer_txt{font-size:12px;padding: 12px;}
-.footer{position: fixed;
-    left: 0;
-    bottom: 0;    width: 100%;
-	background-color:#313133;}
-.header_logo{
-	position:relative;
-	top:15px;
-	background-image:url("../images/index/logo.png");
-	background-repeat: no-repeat;
-	width:100%;
-	height:60px;
-	margin: 12px 0px 0px 20px;
+.header_block {
+  height: 91px;
+  background-image: linear-gradient(to right, #455be1, #d474f5);
 }
-.header_banner{
-	background:url("../images/index/banner_icon.png");
-	width:345px;
-	height:91px;
-	background-size:345px 91px;
-	float:right;
+.footer-block {
+  height: 50px;
+  color: #767678;
 }
-.activity_title{
-	font-size:26px;
-	color:#fff;
-	padding-top: 1%;
-	text-align:center;
+.footer_txt {
+  font-size: 12px;
+  padding: 12px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #313133;
+}
+.header_logo {
+  position: relative;
+  top: 15px;
+  background-image: url("../images/index/logo.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60px;
+  margin: 12px 0px 0px 20px;
+}
+.header_banner {
+  background: url("../images/index/banner_icon.png");
+  width: 345px;
+  height: 91px;
+  background-size: 345px 91px;
+  float: right;
+}
+.activity_title {
+  font-size: 26px;
+  color: #fff;
+  padding-top: 1%;
+  text-align: center;
 }
 
-.activity_welcome{
-	display:flex;
-	font-size:16px;
-	color:#fff;
-	padding-top: 24px;
-	
-	}
-.logout{
-	background:url("../images/index/logout_icon.png");
-	width:28px;
-	height:25px;
-	background-size:28px 25px;
-	margin: 0px 0px 0px 10px;
+.activity_welcome {
+  display: flex;
+  font-size: 16px;
+  color: #fff;
+  padding-top: 24px;
+}
+.logout {
+  background: url("../images/index/logout_icon.png");
+  width: 28px;
+  height: 25px;
+  background-size: 28px 25px;
+  margin: 0px 0px 0px 10px;
 }
 
 @media only screen and (max-width: 1033px) {
-.header_banner{
-	margin-top:-43px;
-}
+  .header_banner {
+    margin-top: -43px;
+  }
 }
 @media only screen and (max-width: 550px) {
-	.activity_title{
-		font-size:20px;
-		
-	}
-	.header_logo{
-	background-image:url("../images/index/logo.png");
-	background-repeat: no-repeat;
-	width:110%;
-	height:40px;
-	margin: 12px 0px 0px 10px;
-	}
+  .activity_title {
+    font-size: 20px;
+  }
+  .header_logo {
+    background-image: url("../images/index/logo.png");
+    background-repeat: no-repeat;
+    width: 110%;
+    height: 40px;
+    margin: 12px 0px 0px 10px;
+  }
 }
 
 /*end of Header and Footer*/
-.mycontainer{
-       position: absolute;
-    width: 100%;
-    background: url(../images/index/login_bg.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    padding: 10px;
-    left: 0;
-    top: 0;
-    height: 100%;
+.mycontainer {
+  position: absolute;
+  width: 100%;
+  background: url(../images/index/login_bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  height: 100%;
 }
-.logo{
-	background:url("../images/index/logo.png");
-	background-repeat:no-repeat;
-	width:200px;
-	height:49px;
-	margin:50px auto;
+.logo {
+  background: url("../images/index/logo.png");
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 49px;
+  margin: 50px auto;
 }
 
-
-.white_bg{
-	background-color:#fff;
-	width:300px;
-	margin:0px auto;
+.white_bg {
+  background-color: #fff;
+  width: 300px;
+  margin: 0px auto;
 }
-.signin{
-font-size:30px;
-color:#2c2c2c;
-text-align:center;}
- input:focus{
-    outline: none;
+.signin {
+  font-size: 30px;
+  color: #2c2c2c;
+  text-align: center;
 }
-.username input, .password input{
-	width: 80%;
-	border: 0px solid #ccc;
-	border-bottom:1px solid #ccc;
-    font-size: 16px;
-    background-color: transparent;
-	background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 16px 20px 16px 57px;
-    margin: 15px 15px 15px 28px;
+input:focus {
+  outline: none;
 }
-.username input[type=text] {
-    background-image: url(../images/index/username_icon.png);
+.username input,
+.password input {
+  width: 80%;
+  border: 0px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  background-color: transparent;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 16px 20px 16px 57px;
+  margin: 15px 15px 15px 28px;
 }
-.password input[type=password] {
-    background-image: url(../images/index/password_icon.png);
+.username input[type="text"] {
+  background-image: url(../images/index/username_icon.png);
 }
-.signin_btn{
-	width: 65%;
-	border: 1px solid #b1b1b1;
-	border-radius:20px;
-	font-size: 22px;
-	color:#fff;
-	background-color: #8a52e6;
-	text-align:center;
-    margin: 19px 0px 15px 48px;
+.password input[type="password"] {
+  background-image: url(../images/index/password_icon.png);
 }
-.forget_password{
-font-size:14px;
-color:#9c9c9c;
-margin:0px 0px 15px 25px;
+.signin_btn {
+  width: 65%;
+  border: 1px solid #b1b1b1;
+  border-radius: 20px;
+  font-size: 22px;
+  color: #fff;
+  background-color: #8a52e6;
+  text-align: center;
+  margin: 19px 0px 15px 48px;
 }
-body{
-	width:100%;
+.forget_password {
+  font-size: 14px;
+  color: #9c9c9c;
+  margin: 0px 0px 15px 25px;
+}
+body {
+  width: 100%;
 }
