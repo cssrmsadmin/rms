@@ -1,5 +1,6 @@
 <app-header></app-header>
 <div class="wrapper">
+  <!--  Main Content -->
   <div class="margin"></div>
   <div class=" dashboard">
     <div class="row">
@@ -9,8 +10,14 @@
           <button (click)="showAddNewHiring()" class="add_new_hiring float-right">
             <img src="../../assets/images/dashboard/add_b_icon.png"> Add New Hiring</button>
         </div>
+
       </div>
     </div>
+    <!--div class="row">
+               <p class="list-row">My JD's</p>
+               <p class="list-row">All open JD's</p>
+               <p class="list-row">Completed JD's</p>
+      </div-->
     <div class="Desktopview hiderdiv">
       <div class="row">
         <table class="table">
@@ -36,7 +43,10 @@
             <tr *ngFor="let listValue of listValues">
               <td> {{ listValue.JD_Name}} </td>
               <td>
-                <img src="../../assets/images/dashboard/download_icon.png">
+                  <a title="click here to download file" (click)= "setDownloadPath(listValue['Attachments'])" download>
+                      <img src="../../assets/images/dashboard/download_icon.png">
+                  </a> 
+                      
               </td>
               <td> {{ listValue.ID }} </td>
               <td> {{ listValue.No_of_Position }} </td>
@@ -61,9 +71,9 @@
         </table>
       </div>
     </div>
-    <div *ngFor="let listValue of listValues | paginate: { itemsPerPage: 1, currentPage: p }; let i = index" class="Mobileview">
+    <div *ngFor="let listValue of listValues | paginate: { itemsPerPage: 1, currentPage: p }; let i = index" class="Mobileview"  >
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>JD_Name</p>
         </div>
         <div class="col-7 listfont ">{{ listValue.JD_Name}}
@@ -73,58 +83,60 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>ID</p>
         </div>
         <div class="col-7 listfont">{{ listValue.ID}}</div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>No_of_Position</p>
         </div>
         <div class="col-7 listfont">{{ listValue.No_of_Position}} </div>
       </div>
+
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>Skill_Sets</p>
         </div>
         <div class="col-7 listfont">{{ listValue.Skill_Sets}}</div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>Created Date</p>
         </div>
         <div class="col-7 listfont">{{ listValue.Created_Date}}</div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>Received
             <br>Profile</p>
         </div>
         <div class="col-7 listfont">{{ listValue.Received_profile}}</div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>Interview Completed</p>
         </div>
         <div class="col-7 listfont">{{ listValue.Interview_completed}}</div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont">
+        <div class="col-5 headingfont" >
           <p>In Progress</p>
         </div>
         <div class="col-7 listfont">{{ listValue.Yet_to_schedule}}</div>
       </div>
       <div class="row">
-        <div class="col-5 headingfont" style="padding-left : 0">
+        <div class="col-5 headingfont" style="padding-left : 0px">
           <button class="view_profile view_550" (click)="viewProfile(listValue['ID']);viewProfileData(listValue['ID'],listValue['JD_Name'],listValue['Skill_Sets'],listValue['No_of_Position'],listValue['Created_Date'] )">
             <img src="../../assets/images/dashboard/view_icon.png"> View Profile</button>
         </div>
         <div class="listfont">
           <button class="add_profile view_550" (click)="showAddProfile(listValue['ID'],listValue['JD_Name'],listValue['Skill_Sets'],listValue['No_of_Position'],listValue['Created_Date'] )">
             <img src="../../assets/images/dashboard/add_s_icon.png">Add Profile</button>
+            
         </div>
-        <div class="pagination">
+        <div class="pagination"  >
           <pagination-controls class="pagination" (pageChange)="p = $event"></pagination-controls>
         </div>
       </div>

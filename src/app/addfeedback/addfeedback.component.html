@@ -1,115 +1,120 @@
 <app-header></app-header>
-<div class="wrapper" *ngFor="let feedback of feedback">
+<div class="wrapper" *ngFor = "let feedback of feedback">
   <div class="row_top"></div>
-  <div class="heading">Add feedback</div>
-  <section>
-    <div class="row">
-      <div class="col-sm-4 col-xs-12 view_fb_image">
-        <div class="row image_top">
-          <div class="col-sm-4"> <img src="../../assets/images/TA/user.png"></div>
-          <div class="col-sm-8 name_top">
-            <h4>{{feedback.Name}}</h4>
-            <div id="mail_color"><span><img src="../../assets/images/TA/email_icon.png"></span>
-              <p id="mail_clr">{{feedback.email}}</p>
+   <div class="heading">Add feedback</div>
+   <section>
+     <div class="row">
+       <div class="col-sm-4 col-xs-12 view_fb_image">
+           <div class="row image_top">
+            <div class="col-sm-4"> <img src="../../assets/images/TA/user.png"></div>
+            <div class="col-sm-8 name_top">
+              <h4>{{feedback.Name}}</h4>
+              <div id="mail_color"><span><img src="../../assets/images/TA/email_icon.png"></span><p id="mail_clr">{{feedback.email}}</p></div>
+              <div><span><img src="../../assets/images/TA/mob_icon.png"></span>{{feedback.Phone_No}}</div>
+              <div><span><img src="../../assets/images/TA/pro_icon.png"></span>view profile</div>
             </div>
-            <div><span><img src="../../assets/images/TA/mob_icon.png"></span>{{feedback.Phone_No}}</div>
-            <div><span><img src="../../assets/images/TA/pro_icon.png"></span>view profile</div>
-          </div>
-        </div>
+           </div>
       </div>
-      <div class="col-sm-4 col-xs-12">
+       <div class="col-sm-4 col-xs-12">
         <div id="exp_text">
-          <p>Experience</p>
-          <p>: {{feedback.Exp}}</p>
+           <p>Experience</p>
+           <p>: {{feedback.Exp}}</p>
         </div>
-        <div id="jd_name_text">
-          <p>JD Name</p>
-          <p>: {{feedback.jd_Name}}<span id="de_icon"><img src="../../assets/images/TA/download_icon.png"></span></p>
-        </div>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-        <div class="top-rightside">
-          <p id="l1_style">L1</p>
-          <p id="current_stage">Current Stage</p>
-          <p id="time_slot"><span><img src="../../assets/images/TA/time_icon.png" id="right_side_image"></span>9am to
-            10am </p>
-          <p id="scheduled_time">scheduled time</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="l0_feedback_bgcolor">
-    <div class="row">
+         <div id="jd_name_text">
+           <p>JD Name</p>
+           <p>: {{feedback.jd_Name}}<span id="de_icon"><img src="../../assets/images/TA/download_icon.png"></span></p>
+         </div>
+       </div>
+       <div class="col-sm-4 col-xs-12">
+         <div class="top-rightside">
+          <p id="l1_style">L1</p><p id="current_stage">Current Stage</p>
+          <p id="time_slot"><span><img src="../../assets/images/TA/time_icon.png" id="right_side_image"></span>9am to 10am </p><p id="scheduled_time">scheduled time</p>
+         </div>
+       </div>
+     </div>
+   </section>
+   <!-- <section id="program_statement_bg">
+      <div><h4>Program statement</h4></div>
+      <p>Lorem Ipsumis simply dummy text of the printing and typesetting industry. Lorem Ipsumis simply dummy text of the printing and typesetting industry.</p>
+      <h4>Solution by candidate</h4>
+      <p id="doc_view">.Net.doc</p>
+   </section> -->
+   <section id="l0_feedback_bgcolor">
+     <div class="row">
       <div class="col-sm-3 col-xs-12">
-        <h4>L0 - Feedback</h4>
-        <div id="stars_fd"><img src="../../assets/images/TA/rating_icon.png">
+         <h4>L0 - Feedback</h4>
+         <div id="stars_fd"><img src="../../assets/images/TA/rating_icon.png">
           <img src="../../assets/images/TA/rating_icon.png">
           <img src="../../assets/images/TA/rating_icon.png">
-        </div>
-        <p id="comments">{{feedback.L0_Feedback}}</p>
+         </div>
+         <p id="comments">{{feedback.L0_Feedback}}</p>
       </div>
       <div class="col-sm-3 col-xs-12">
-        <div id="divProgress" class="cir1">
-          <p class="cir"> {{feedback.L0_Rating}}/10</p>
-        </div>
+        <div id="divProgress" class="cir1"><p class="cir"> {{feedback.L0_Rating}}/10</p></div>
         <p style="text-align:center">Puzzle score</p>
       </div>
-    </div>
+     </div>
+   </section>
+   <section id="l1_feedback_bgcolor">
+       <h4>L1 - Feedback Core Competency</h4>
+         <div class="row" *ngFor="let items of skillSetArray; let i=index;">
+         <div class="col-sm-6 col-md-6">
+          <p class="skill_margin">{{items}}</p>
+          <div class="row skills">
+            <div class="col-sm-5 col-xs-6">
+                <ng5-slider [(value)]="valueObject[items]" [options]="verticalSlider.options"></ng5-slider>
+             </div>
+             <div class="col-sm-2 col-xs-6"><h5 class="rated">Rated : {{valueObject[items]}}</h5></div>
+             <div class="col-sm-5 col-xs-12">
+              <input type="text" class="comments" placeholder="Comments">
+             </div>
+           </div>
+         </div>
+       </div>
+         <h4>L1 - Feedback General Competency</h4>
+       <div class="row">
+         <div class="col-sm-6 col-md-6">
+          <p class="skill_margin">Skill1</p>
+            <div class="row skills">
+              <div class="col-sm-5 col-xs-6">
+                  <ng5-slider [(value)]="verticalSlider7.value" [options]="verticalSlider7.options"></ng5-slider>
+               </div>
+               <div class="col-sm-2 col-xs-6"><h5 class="rated">Rated : {{verticalSlider7.value}}</h5></div>
+               <div class="col-sm-5 col-xs-12">
+                <input type="text" class="comments" placeholder="Comments">
+               </div>
+             </div>
+         </div>
+       </div>
+     <div class="row">
+         <div class="col-sm-6 col-md-6">
+          <p class="skill_margin">Skill1</p>
+            <div class="row skills">
+              <div class="col-sm-5 col-xs-6">
+                  <ng5-slider [(value)]="verticalSlider8.value" [options]="verticalSlider8.options"></ng5-slider>
+               </div>
+               <div class="col-sm-2 col-xs-6"><h5 class="rated">Rated : {{verticalSlider8.value}}</h5></div>
+               <div class="col-sm-5 col-xs-12">
+                <input type="text" class="comments" placeholder="Comments">
+               </div>
+             </div>
+         </div>
+       </div>
+      <h4>L1 - Overall Comments</h4>
+      <input type="text" id="comments" placeholder="Comments">
   </section>
-  <section id="l1_feedback_bgcolor">
-    <h4>L1 - Feedback Core Competency</h4>
-    <div class="row" *ngFor="let items of skillSetArray; let i=index;">
-      <div class="col-sm-6 col-md-6">
-        <p class="skill_margin">{{items}}</p>
-        <div class="row skills">
-          <div class="col-sm-5 col-xs-6">
-            <ng5-slider [(value)]="valueObject[items]" [options]="verticalSlider.options"></ng5-slider>
-          </div>
-          <div class="col-sm-2 col-xs-6">
-            <h5 class="rated">Rated : {{valueObject[items]}}</h5>
-          </div>
-          <div class="col-sm-5 col-xs-12">
-            <input type="text" class="comments" placeholder="Comments">
-          </div>
-        </div>
-      </div>
-    </div>
-    <h4>L1 - Feedback General Competency</h4>
-    <div class="row">
-      <div class="col-sm-6 col-md-6">
-        <p class="skill_margin">Skill1</p>
-        <div class="row skills">
-          <div class="col-sm-5 col-xs-6">
-            <ng5-slider [(value)]="verticalSlider7.value" [options]="verticalSlider7.options"></ng5-slider>
-          </div>
-          <div class="col-sm-2 col-xs-6">
-            <h5 class="rated">Rated : {{verticalSlider7.value}}</h5>
-          </div>
-          <div class="col-sm-5 col-xs-12">
-            <input type="text" class="comments" placeholder="Comments">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-md-6">
-        <p class="skill_margin">Skill1</p>
-        <div class="row skills">
-          <div class="col-sm-5 col-xs-6">
-            <ng5-slider [(value)]="verticalSlider8.value" [options]="verticalSlider8.options"></ng5-slider>
-          </div>
-          <div class="col-sm-2 col-xs-6">
-            <h5 class="rated">Rated : {{verticalSlider8.value}}</h5>
-          </div>
-          <div class="col-sm-5 col-xs-12">
-            <input type="text" class="comments" placeholder="Comments">
-          </div>
-        </div>
-      </div>
-    </div>
-    <h4>L1 - Overall Comments</h4>
-    <input type="text" id="comments" placeholder="Comments">
-  </section>
+
+
   <div class="submit_btn"><button class="btn">Submit</button></div>
-</div>
+   </div>
 <app-footer></app-footer>
+<!-- <div class="container-fluid">
+  <div class="row" style="height: 300px">
+ 
+
+    <div class="col-2" style="height: 100%">
+      <ng5-slider [(value)]="verticalSlider1.value" [options]="verticalSlider1.options"></ng5-slider>
+    </div>
+
+  </div>
+</div> -->

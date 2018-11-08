@@ -2,28 +2,26 @@
 <div class="wrapper add-new-hiring-container">
   <div class="row_top"></div>
   <div class="heading">Upload questions pattern</div>
-  <form (ngSubmit)="submitValeus()">
-    <section>
-      <div class="jd_section">
-        <p>Unit</p>
-        <input type="text" class="form-control" name="unit" [(ngModel)]="uploadQuestionsValues.unit" required>
-        <p>Practice</p>
-        <input type="text" class="form-control" name="practice" [(ngModel)]="uploadQuestionsValues.practice" required>
-        <p>Skills</p>
-        <input type="text" id="bu_name" class="form-control" name="skill" [(ngModel)]="uploadQuestionsValues.skill"
-          required>
-        <p>No. of Exp</p>
-        <input type="text" id="exp" class="form-control" required [(ngModel)]="uploadQuestionsValues.experience" name="experience"
-          required>
-        <p>Upload Questions</p>
-        <label for="file"><img src="../../assets/images/TA/attach_icon.png" id="attach_icon_image"><span id="attach_text">Attach</span></label>
-        <input type="file" id="file" [(ngModel)]="attachment" name="attachment" required (change)="handleFileInput($event)">
-        <div class="output">{{ fileName }} </div>
-      </div>
-    </section>
-    <div class="submit_button">
-      <div class="submit_btn"><input type="submit" class="btn"></div>
-    </div>
-  </form>
-</div>
+  <form  (ngSubmit)="submitValeus()">
+      <section>
+          <div class="jd_section">
+            <p>Unit</p>
+            <input type="text" class="form-control" name="unit" [(ngModel)]="uploadQuestionsValues.unit" required>
+            <p>Practice</p>
+            <input type="text" class="form-control" name="practice" [(ngModel)]="uploadQuestionsValues.practice" required>
+            <p>Skills</p>
+            <input type="text" id="bu_name" class="form-control" name="skill" [(ngModel)]="uploadQuestionsValues.skill" required>
+            <p>No. of Exp</p>
+            <input type="text" id="exp" class="form-control" required [(ngModel)]="uploadQuestionsValues.experience" name="experience" required>
+            <p>Upload Questions</p>
+            <label for="file"><img src="../../assets/images/TA/attach_icon.png" id="attach_icon_image"><span id="attach_text">Attach</span></label>
+            <input type="file" id="file" [(ngModel)]="attachment" name="attachment" required (change)="handleFileInput($event)">
+            <div class="output">{{ fileName }} </div>
+          </div>
+       </section>
+            <div class="submit_button">
+               <div class="submit_btn"><input type="submit" class="btn" ></div>
+            </div>
+           
+   </form>
 <app-footer></app-footer>

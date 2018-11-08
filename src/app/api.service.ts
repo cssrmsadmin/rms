@@ -41,6 +41,7 @@ export class apiService {
   }
   getViewProfiles(jdid: any):any {
     return this.http.get("https://addjd1.herokuapp.com/viewjd?questions="+jdid);
+    
   }
   addNewHiring(BU_Name,JD_Name,Designation,Years_of_Exp,No_of_Position,L0_interview,Program_code,L1_Panelist_1,L1_Panelist_2,L2_Panelist_1,L2_Panelist_2,Skills,Attachment):any{
     const addNewHiring= {

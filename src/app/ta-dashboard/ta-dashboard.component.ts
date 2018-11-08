@@ -20,10 +20,13 @@ import { Router } from "@angular/router";
       });
       
     }
-   
+    setDownloadPath(value){
+      window.location = value;
+    }  
     viewProfile(event){
       console.log("This is from tadashboard "+event);
       this.apiservice.setOption('jdid',event);
+      localStorage.setItem("profileID", event);
       this.router.navigate(['/view-profile']);
     }
     showAddNewHiring(){
