@@ -8,9 +8,11 @@ interface addProfile{
   firstName: string;
   middleName: string;
   lastName: string;
+  university: string,
   skills: string;
   email: string;
   mobileNo: number;
+  lastCompanyName: string;
   exp: number;
 
 
@@ -57,7 +59,9 @@ export class AddprofileComponent implements OnInit {
        "Last_Name": this.addProfile.lastName,
        "Emp_Skill": this.addProfile.skills.replace(/,/g,"+"),
        "Email": this.addProfile.email,
+       "University":this.addProfile.university,
        "Phone_No": this.addProfile.mobileNo,
+       "Last_Comp_Name":this.addProfile.lastCompanyName,
        "Exp": this.addProfile.exp,
        "Attachment":this.fileName
     }
