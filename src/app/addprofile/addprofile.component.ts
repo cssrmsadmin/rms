@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { TADashboardComponent } from '../ta-dashboard/ta-dashboard.component';
 import { HttpClient } from '@angular/common/http';
 interface addProfile{
+  jdid: string;
   firstName: string;
   middleName: string;
   lastName: string;
@@ -53,7 +54,7 @@ export class AddprofileComponent implements OnInit {
 
   submitValeus(){
     const addProfiles={
-      "JD_ID":this.te.jdid,
+      "JD_ID":String(this.te.jdid),
        "First_Name":this.addProfile.firstName,
        "Middle_Name":this.addProfile.middleName,
        "Last_Name": this.addProfile.lastName,
@@ -66,7 +67,7 @@ export class AddprofileComponent implements OnInit {
        "Attachment":this.fileName
     }
     
-  this.http.get("https://addjd1.herokuapp.com/newprof?questions="+JSON.stringify(addProfiles)).subscribe((data)=>{
+  this.http.get("http://127.0.0.1:5000/newprof?questions="+JSON.stringify(addProfiles)).subscribe((data)=>{
   });
 
   }
