@@ -37,30 +37,30 @@ export class apiService {
   }
   constructor(private http: HttpClient) {}
   getDashboardJson():any{
-    return this.http.get("https://addjd1.herokuapp.com/addjd");
+    return this.http.get("http://127.0.0.1:5000/addjd");
   }
   getViewProfiles(jdid: any):any {
-    return this.http.get("https://addjd1.herokuapp.com/viewjd?questions="+jdid);
+    return this.http.get("http://127.0.0.1:5000/viewjd?questions="+jdid);
     
   }
-  addNewHiring(BU_Name,JD_Name,Designation,Years_of_Exp,No_of_Position,L0_interview,Program_code,L1_Panelist_1,L1_Panelist_2,L2_Panelist_1,L2_Panelist_2,Skills,Attachment):any{
+  addNewHiring(BU_Name,JD_Name,Designation,Years_of_Exp,No_of_Position,external_interview_panel_details,L1_Panelist_1,L1_Panelist_2,L2_Panelist_1,L2_Panelist_2,Skills,Attachment):any{
     const addNewHiring= {
       "BU_Name":BU_Name,
       "JD_Name":JD_Name,
       "Designation":Designation,
       "Years_of_Exp":Years_of_Exp,
       "No_of_Position":No_of_Position,
-      "L0_interview":L0_interview,
-      "Program_code":"Skills",
       "L1_Panelist_1":L1_Panelist_1,
       "L1_Panelist_2":L1_Panelist_2,
       "L2_Panelist_1":L2_Panelist_1,
       "L2_Panelist_2":L2_Panelist_2,
+      "Ext_Int":external_interview_panel_details,
       "Skills":Skills,
       "Attachment":Attachment
     }
-    console.log("Add New Hiring data"+addNewHiring);
-    return this.http.get("https://addjd1.herokuapp.com/addjobdesc?questions="+JSON.stringify(addNewHiring));
+    console.log("Add New Hiring data"+JSON.stringify(addNewHiring));
+    //console.log("Response AddJob"+this.http.get("http://127.0.0.1:5000/addjobdesc?questions="+JSON.stringify(addNewHiring)));
+    return this.http.get("http://127.0.0.1:5000/addjobdesc?questions="+JSON.stringify(addNewHiring));
   }
   getEmp(id,pwd):any {
     const lgoinArray ={
