@@ -18,7 +18,7 @@ export class ExecutiveDashboardComponent implements OnInit {
   constructor(private apiservice :apiService,private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get("https://addjd1.herokuapp.com/executive-dashboard").subscribe( val => {
+    this.http.get("").subscribe( val => {
       this.listValue =val['data'];
       // console.log(this.listValue[0].Last_3_month_stats);
       for (let values of this.listValue[0].Last_3_month_stats){

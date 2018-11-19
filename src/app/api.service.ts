@@ -76,5 +76,4 @@ export class apiService {
     console.log("Feedback array: "+JSON.stringify(feedbacckArray));
     return this.http.get("");
   }
-
 }

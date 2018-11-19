@@ -35,7 +35,7 @@ submitValeus() {
     "Exp" : this.uploadQuestionsValues.experience,
     "Attachment" : this.fileName,
   }
-  this.http.get("https://addjd1.herokuapp.com/admin?questions="+JSON.stringify(uploadQuestionss)).subscribe((data)=>{
+  this.http.get("").subscribe((data)=>{
   });
 }
 
