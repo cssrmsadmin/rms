@@ -67,7 +67,7 @@ export class AddprofileComponent implements OnInit {
        "Attachment":this.fileName
     }
     
-  this.http.get("http://127.0.0.1:5000/newprof?questions="+JSON.stringify(addProfiles)).subscribe((data)=>{
+  this.http.get("").subscribe((data)=>{
   });
 
   }
