@@ -23,6 +23,7 @@ import { ChartsModule } from 'ng2-charts';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { UploadFileService } from './upload-file.service';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 const routers : Routes = [
   { path: '', redirectTo:'login', pathMatch:'full' },
@@ -34,7 +35,8 @@ const routers : Routes = [
   { path: 'view-feedback', component:ViewfeedbackComponent},
   { path: 'add-feedback', component:AddfeedbackComponent},
   { path: 'upload-questions', component:AdminUploadQuestionsComponent},
-  { path: 'executive-dashboard', component:ExecutiveDashboardComponent}
+  { path: 'executive-dashboard', component:ExecutiveDashboardComponent},
+  
 ];
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ const routers : Routes = [
     AddfeedbackComponent,
     AdminUploadQuestionsComponent,
     ExecutiveDashboardComponent,
-  
+    
+    
    
   ],
   imports: [
@@ -62,8 +65,8 @@ const routers : Routes = [
     AngularFileUploaderModule,
     Ng5SliderModule,
     ChartsModule,
-    NgxPaginationModule
-    
+    NgxPaginationModule,
+    NgbModule
   ],
   providers: [apiService,
     TADashboardComponent,UploadFileService],

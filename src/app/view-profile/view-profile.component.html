@@ -1,95 +1,97 @@
-<app-header></app-header>
-<div class="wrapper view-profile-block" *ngFor = "let listProfile of listProfile">
-  <!--div class="col-sm-12 col-md-12 col-lg-12 yts-view-profile">View Profile</div-->
-  <div class="jd-info">
-      <table>
-        <tr>
-          <td width="25%"><div width="25%">JD ID :{{listProfile.Jd_Id}}</div></td>
-          <td width="25%"><div width="25%">JD Name: {{listProfile.jd_Name}}</div></td>
-          <td width="40%"><div width="25%">&nbsp; </div></td>
-          <td width="25%"><div width="25%" float="right"> <button class="btn btn-default btn-add-profile" (click)="showAddProfile()">
-              <img src="../../assets/images/dashboard/add_b_icon.png">Add Profile </button>  </div></td>
-        </tr>
-        <tr>
-      <td width="25%"><div >Created on :{{listProfile.created_date}}</div></td> 
-      <!-- <td width="25%">Total Profile received: 109</td> -->
-      <td width="25%"></td>
-      <td width="25%"></td>
-      <!--div class="col-2 jd-info-col">:{{listProfile.created_date}}</div-->
-        </tr> 
-      </table>
-      <!--div class="col-2 jd-info-col">JD ID :{{listProfile.Jd_Id}}</div-->
-      
-      <!--div class="col-2 jd-info-col">JD Name: {{listProfile.jd_Name}}</div-->
-      
-      <!--div class="col-2 text-center tot-profiles">Total Profile received 109 </div-->
-      
-      <!--div class="col-3 jd-info-col" float="right"> <button class="btn btn-default btn-add-profile" >
-        <img src="../../assets/images/dashboard/add_b_icon.png">Add Profile </button>  </div-->
-    
-      </div>
-  <div class="interview-block">
-    <div class="row">
-      <div class="col-2 interview-block-col">
-        <!-- <button class="btn btn-primary">Yet to schedule : 18</button> -->
-      </div>
-      <div class="col-3 interview-block-col">
-          <!-- <button class="btn btn-default interview-completed">Interview completed profile : 91</button> -->
-      </div>
-      <div class="col-3 interview-block-col">Interview stage Workflow</div>
-      <div class="col-3 interview-block-col">
-          <ul class="interview-stage-flow">
-            <li class="l0">L0</li>
-            <li class="l1">L1</li>
-            <li class="l2">L2</li>
-          </ul>
-      </div>
-    </div>
+<div class="bopis-store-delivery-page-wrapper">
+  <div style="text-align:center" class="content-wrap">
+    <span class="dot-delivery icon"></span>
+    <span class="dot-payment icon"></span>
+    <span class="dot-review icon"></span>
   </div>
-  <!--div class="search-candidates-block">
-    <div class="inner-addon left-addon">
-      <input type="text" class="form-control candidate-search" />
-    </div>
-  </div-->
-  <div class="jd-list-block">
-    <table class="table jd-tbl-list">
-      <thead>
-        <tr>
-        <td>Name</td>
-        <td>Skills</td>
-        <td>Profile</td>
-        <td>Role</td>
-        <td>Interview Stage</td>
-        <td>Profile Score</td>
-        <td>&nbsp;</td>
-        <td></td>
-        </tr>
-      </thead>
-      <tbody class="data_font">
-        <tr *ngFor = "let profiles of listProfile.Profiles; index as i">
-            <td class="cad-name-email">
-              <p class="cad-name">{{profiles.Name}} </p>
-              <p class="email-icon">{{profiles.email}}</p>
-            </td>
-            <td class="mr-top">{{profiles.Phone_No}}</td>
-            <td class="mr-top">
-              <!-- <a [href]="profiles.Attachments" download target="_open"><div class="profile-icon"></div></a> -->
-              <a title="click here to download file" (click)= "setDownloadPath(profiles.Attachments)" download target="_open">
-                  <div class="profile-icon"></div>
-              </a> 
-             </td>
-            <td class="mr-top">{{profiles.Exp}}</td>
-            <td class="mr-top">{{profiles.Int_Stage}}</td>
-            <td class="mr-top">{{profiles.Profile_Score}}</td>
-            <td class="mr-top"><a  ngShow="flag!=1" (click)="showFeedback(listProfile['Jd_Id'], profiles['Prof_ID'],i)"> <span class="view-feedback">View Feedback</span> </a></td>
-            <td class="mr-top"><a ngShow="flag==1"  (click)="showAddFeedback(listProfile['Jd_Id'], profiles['Prof_ID'],i)"> <span class="view-feedback">Add Feedback</span> </a></td>
-
-        </tr>
-        <tr><td colspan="11">&nbsp;</td></tr>
-    </tbody>
-    </table>
+  <div class="bopis-dot-icon-text">
+    <span>{{{bopis_delivery_page_delivery_text}}}</span>
+    <span>{{{bopis_delivery_page_payment_text}}}</span>
+    <span>{{{bopis_delivery_page_review_text}}}</span>
+  </div>
+  <div class="bopis-delivery-page-title">
+    <h3>{{{bopis_store_delivery_header}}</h3>
+  </div>
+  <hr>
+  <div id="map" class="bopis-delivery-page-map-block"></div>
+  <div class="bopis-delivery-page-store-block address-block">
+    <ul>
+      <li>
+        <address>
+          <h3 class="bopis-delivery-page-header-text">{{{bopis_delivery_page_store_header_text}}}</h3>
+          <span>(#{DISTANCE} {{{bopis_deliver_page_distance_type}}})</span>
+          <p>#{ADDRESS}</p>
+          <p>#{STATE}, #{STATE_CODE #{ZIP_OR_POSTAL}</p>
+          <p class="bopis-delivery-page-space"></p>
+          <p>{{{bopis_delivery_page_hours_text}}} #{STORE_HOURS}</p>
+          <p>{{{bopis_delivery_page_phone_text}}}<span class="bopis-delivery-page-bold-text">#{PHONE}</span></p>
+          <p><a href="#" class="bopis-delivery-page-bold-text">{{{bopis_delivery_page_direction_text}}}</a></p>
+          <span class="bopis-delivery-page-space"></span>
+          <p class="bopis-delivery-page-bold-text">{{{bopis_delivery_page_available_for_pickup_text}}}</p>
+          <p>#{PICKUP_TIMING}</p>
+        </address>
+      </li>
+    </ul>
+  </div>
+  <div class="bopis-delivery-page-change-store">
+    <a href="#">{{{bopis_delivery_page_change_store_text}}}</a>
+  </div>
+  <div class="bopis-delivery-page-msg">
+    <p>{{{bopis_delivery_page_order_pickup_msg}}}</p>
+  </div>
+  <hr>
+  <div class="bopis-delivery-page-pickup-order">
+    <p>{{{bopis_delivery_page_who_will_pickup_order_text}}}</p>
+  </div>
+  <div class="custom-control bopis-radio">
+    <input type="radio" name="who">
+    <label class="bopis-delivery-radio-label">{{{bopis_delivery_page_me_text}}}</label>
+  </div>
+  <div class="custom-control bopis-radio">
+    <input type="radio" class="custom-control bopis-radio" name="who" checked="checked">
+    <label class="bopis-delivery-radio-label">{{{bopis_delivery_page_someone_else_text}}}</label>
+  </div>
+  <div class="bopis-other-pickup-form">
+    <input type="text" name="bopis-other-pickup-form_first_name" placeholder="{{{bopis_delivery_page_first_name_placeholder_text}}}">
+    <input type="text" name="bopis-other-pickup-form_last_name" placeholder="{{{bopis_delivery_page_last_name_placeholder_text}}}">
+    <input type="text" name="bopis-other-pickup-form_phone" placeholder="{{{bopis_delivery_page_phone_placeholder_text}}}">
+    <input type="text" name="bopis-other-pickup-form_email" placeholder="{{{bopis_delivery_page_email_placeholder_text}}}">
+    <span>{{{bopis_delivery_page_required_fields_text}}}</span>
+  </div>
+  <hr>
+  <div>
+    <p>{{{bopis_delivery_page_gift_wrapping_text}}}</p>
+  </div>
+  <div class="custom-control bopis-radio">
+    <input type="radio" class="gift-group-radio field bopis-radio" name="GIFT_GROUP" checked="checked">
+    <label class="bopis-delivery-radio-label">{{{bopis_delivery_page_wrap_together_text}}}</label>
+  </div>
+  <div class="custom-control bopis-radio">
+    <input type="radio" class="gift-group-radio field bopis-radio" name="GIFT_GROUP">
+    <label class="bopis-delivery-radio-label">{{{bopis_delivery_page_wrap_individually_text}}}</label>
+  </div>
+  <div class="custom-control bopis-radio">
+    <input type="radio" class="gift-group-radio field bopis-radio" name="GIFT_GROUP">
+    <label class="bopis-delivery-radio-label">{{{bopis_delivery_page_no_gift_box_text}}}</label>
+  </div>
+  <div class="bopis-gift-form">
+    <input type="text" name="gift-to" placeholder="{{{bopis_delivery_page_to_placeholder_text}}}">
+    <input type="text" name="gift-from" placeholder="{{{bopis_delivery_page_from_placeholder_text}}}">
+    <textarea name="" placeholder="{{{bopis_delivery_page_gift_msg_placeholder_text}}}"></textarea>
   </div>
 </div>
-
-<app-footer></app-footer>
-
+<div class="bopis-help-information">
+  <span class="bopis-help-text-info">{{{bopis_delivery_page_can_we_help_text}}}</span>
+  <span class="bopis-help-phone"><a href="#">{{{bopis_delivery_page_phone_number_text}}}</a></span>
+  <hr>
+  <div class="bopis-footer-text">
+    <p>{{{bopis_delivery_page_secure_checkout_text}}}</p>
+    <p>{{{bopis_delivery_page_jomalone_text}}}</p>
+  </div>
+</div>
+<div class="bopis-delivery-page-block">
+  <a href="#" class="bopis-delivery-page-btn button">{{{bopis_delivery_page_continue_checkout_text}}}</a>
+</div>
+<script>
+  document.write('<' + 'script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5/jquery.googlemap.js" type="text/javascript"><' + '/script>');
+</script>

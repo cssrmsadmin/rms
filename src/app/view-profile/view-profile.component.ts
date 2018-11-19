@@ -1,73 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { apiService } from '../api.service';
-import { Subscriber,Subscribable } from 'rxjs';
-import { Router } from '@angular/router';
-import { TADashboardComponent } from '../ta-dashboard/ta-dashboard.component';
-
-
-@Component({
-  selector: 'app-view-profile',
-  templateUrl: './view-profile.component.html',
-  styleUrls: ['./view-profile.component.css']
-})
-export class ViewProfileComponent implements OnInit {
-  listProfile:any = [];
-  te:any = [];
-  listValues:any=[];
-  x:any=[];
-
-  constructor(private apiservice :apiService, private router: Router, private ta:TADashboardComponent) {
-    this.te = this.apiservice.getOption();
-    console.log("Welcome getOption :"+this.te.jdid);
-   }
-
-  ngOnInit() {
-    this.apiservice.getViewProfiles(localStorage.getItem("profileID")).subscribe( val => {
-      this.listProfile =val['data'];
-      console.log(this.listProfile, "this.listprofiole");
-      this.x=this.listProfile[0].Profiles.length;
-      console.log(this.listProfile[0].Profiles.length);
-      });
-//     this.apiservice.getViewProfiles(this.te.jdid).subscribe( val => {
-//       this.listProfile =val['data'];
-//       this.x=this.listProfile[0].Profiles.length;
-// console.log(this.listProfile[0].Profiles.length); 
-//     });
-    this.apiservice.getDashboardJson().subscribe( val => {
-      this.listValues =val['data'];
-    });
-  }
-  setDownloadPath(value){
-    // window.location = value;
-    window.open( value,'_blank');
-  }  
-  showFeedback(jdId,profId,i){
-    console.log("From View Profile"+jdId+" "+profId+""+i);
-    if(i<=(this.listProfile[0].Profiles.length-6))
-    {
-      this.router.navigate(['/view-feedback']);
+var generic = generic || {},
+Drupal = Drupal || {};
+(function($) {
+  Drupal.behaviors.bopis_store_delivery_v1 = {
+    attach: function(context, settings) {
+      if ($('body').hasClass('device-mobile')) {
+        $("#map").googleMap({});
+      }
     }
-    else{
-      alert("This candidate is internal");
-      this.router.navigate(['/view-profile']);
-    }
-    this.apiservice.setJdIdProfId(jdId,profId);
-    // this.router.navigate(['/view-feedback']);
-  }
-  showAddFeedback(jdId,profId,i){
-    if(i<=(this.listProfile[0].Profiles.length-6))
-    {
-      this.router.navigate(['/add-feedback']);
-    }
-    else{
-      alert("This candidate is internal");
-      this.router.navigate(['/view-profile']);
-    }
-    this.apiservice.setJdIdProfId(jdId,profId);
-    
-  }
-  showAddProfile(){
-    
-    this.router.navigate(['/add-profile']);
-  }
-}
+  };
+})(jQuery);

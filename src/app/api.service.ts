@@ -37,10 +37,10 @@ export class apiService {
   }
   constructor(private http: HttpClient) {}
   getDashboardJson():any{
-    return this.http.get("http://127.0.0.1:5000/addjd");
+    return this.http.get("");
   }
   getViewProfiles(jdid: any):any {
-    return this.http.get("http://127.0.0.1:5000/viewjd?questions="+jdid);
+    return this.http.get("");
     
   }
   addNewHiring(BU_Name,JD_Name,Designation,Years_of_Exp,No_of_Position,external_interview_panel_details,L1_Panelist_1,L1_Panelist_2,L2_Panelist_1,L2_Panelist_2,Skills,Attachment):any{
@@ -59,14 +59,14 @@ export class apiService {
       "Attachment":Attachment
     }
     console.log("Add New Hiring data"+JSON.stringify(addNewHiring));
-    //console.log("Response AddJob"+this.http.get("http://127.0.0.1:5000/addjobdesc?questions="+JSON.stringify(addNewHiring)));
-    return this.http.get("http://127.0.0.1:5000/addjobdesc?questions="+JSON.stringify(addNewHiring));
+    
+    return this.http.get("");
   }
   getEmp(id,pwd):any {
     const lgoinArray ={
       "id":id,"pwd":pwd
     }
-    return this.http.get("https://addjd1.herokuapp.com/authenticate?questions="+JSON.stringify(lgoinArray));
+    return this.http.get("");
   }
   getViewFeedback(jdid,profid):any{
     console.log("before "+jdid,profid);
@@ -74,7 +74,7 @@ export class apiService {
       "jdid":jdid,"profid":profid
     }
     console.log("Feedback array: "+JSON.stringify(feedbacckArray));
-    return this.http.get("https://addjd1.herokuapp.com/viewfeedback?questions="+JSON.stringify(feedbacckArray));
+    return this.http.get("");
   }
 
 }
